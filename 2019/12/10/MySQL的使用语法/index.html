@@ -6,14 +6,14 @@
   <meta name="keywords" content=" MySQL , 数据库 ">
   <meta name="description" content="MySQL数据库 | ZhYun1on9">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="创建数据库">
+<meta name="description" content="数据库 以前通过IO技术对数据进行增删改查,相当于自己写的数据库软件,只不过功能和性能非常低,如果说每次开发一个新的项目都写一遍数据增删改查相关的代码,开发效率低并且不能保证性能问题,数据库软件就是用于解决此问题.  DBMS: DataBase(数据库) Management(管理) System(系统) 俗称数据库软件, 常见的DBMS有:  MySQL: Oracle公司产品, 08年被Su">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL数据库">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;10&#x2F;MySQL%E7%9A%84%E4%BD%BF%E7%94%A8%E8%AF%AD%E6%B3%95&#x2F;index.html">
 <meta property="og:site_name" content="ZhYun1on9">
-<meta property="og:description" content="创建数据库">
+<meta property="og:description" content="数据库 以前通过IO技术对数据进行增删改查,相当于自己写的数据库软件,只不过功能和性能非常低,如果说每次开发一个新的项目都写一遍数据增删改查相关的代码,开发效率低并且不能保证性能问题,数据库软件就是用于解决此问题.  DBMS: DataBase(数据库) Management(管理) System(系统) 俗称数据库软件, 常见的DBMS有:  MySQL: Oracle公司产品, 08年被Su">
 <meta property="article:published_time" content="2019-12-10T05:20:09.000Z">
-<meta property="article:modified_time" content="2019-12-10T14:27:09.407Z">
+<meta property="article:modified_time" content="2019-12-10T16:02:31.008Z">
 <meta property="article:author" content="ZhYun1on9">
 <meta property="article:tag" content="MySQL">
 <meta property="article:tag" content="数据库">
@@ -320,7 +320,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-10 22:27:09'>2019-12-10 13:20</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-11 00:02:31'>2019-12-10 13:20</time>
         
     </div>
     <div class="article-meta">
@@ -342,7 +342,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#创建数据库"><span class="toc-text">创建数据库</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数据库"><span class="toc-text">数据库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SQL"><span class="toc-text">SQL</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#如何连接MySQL软件"><span class="toc-text">如何连接MySQL软件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DDL-数据定义语言"><span class="toc-text">DDL 数据定义语言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库相关SQL语句"><span class="toc-text">数据库相关SQL语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库基本练习"><span class="toc-text">数据库基本练习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表相关"><span class="toc-text">表相关</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -358,7 +358,49 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h1>
+        <h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><ul>
+<li><p>以前通过IO技术对数据进行增删改查,相当于自己写的数据库软件,只不过功能和性能非常低,如果说每次开发一个新的项目都写一遍数据增删改查相关的代码,开发效率低并且不能保证性能问题,数据库软件就是用于解决此问题.</p>
+</li>
+<li><p>DBMS: DataBase(数据库) Management(管理) System(系统) 俗称数据库软件, 常见的DBMS有:</p>
+<ol>
+<li><p>MySQL: Oracle公司产品, 08年被Sun公司收购,09年Sun公司被Oracle收购, 开源产品,   原MySQL团队从Oracle离职创建MariaDB , 市场占有率第一.</p>
+</li>
+<li><p>Oracle:闭源产品,Oracle公司产品,拉里.埃里森 32岁创业. 市场占有率第二. 性能最高 价格最贵</p>
+</li>
+<li><p>SQLServer: 微软公司产品,闭源,市场占有率第三,主要应用在微软整套解决方案中.</p>
+</li>
+<li><p>DB2: IBM公司产品, 闭源产品, 应用在IBM公司的整套解决方案中 </p>
+</li>
+<li><p>SQLite: 轻量级数据库,主要应用在移动设备(手机)和嵌入式设备中(各种智能设备) 安装包只有几十k</p>
+<p>开发网站需要用到哪些东西:  开发语言+Web服务软件+操作系统+数据库软件</p>
+</li>
+</ol>
+</li>
+<li><p>开源和闭源:</p>
+<ol>
+<li>开源: 开放源代码, 盈利方式: 靠卖服务, 开源产品有技术大拿无偿升级维护.</li>
+<li>闭源: 不开放源代码, 盈利方式: 靠卖产品+卖服务, 有技术大拿攻击,但是会养一帮人维护升级.</li>
+</ol>
+</li>
+</ul>
+<h1 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h1><ul>
+<li>Structured结构化 Query查询 Language语言,负责程序员和数据库软件之间的沟通<hr>
+
+</li>
+</ul>
+<h1 id="如何连接MySQL软件"><a href="#如何连接MySQL软件" class="headerlink" title="如何连接MySQL软件"></a>如何连接MySQL软件</h1><ul>
+<li>Linux:桌面空白右键打开终端<br>  mysql -uroot -p 回车 输入密码 回车</li>
+<li>Windows: cmd<br>  mysql -uroot -p 回车 输入密码 回车<br>  Ctrl+C 退出<hr>
+
+</li>
+</ul>
+<h1 id="DDL-数据定义语言"><a href="#DDL-数据定义语言" class="headerlink" title="DDL 数据定义语言"></a>DDL 数据定义语言</h1><ul>
+<li>数据库软件中保存数据需要先建库再建表</li>
+</ul>
+<h2 id="数据库相关SQL语句"><a href="#数据库相关SQL语句" class="headerlink" title="数据库相关SQL语句"></a>数据库相关SQL语句</h2><p>1.查询所有数据库<br>    - 格式: show databases;<br>2.创建数据库<br>    - 格式: create database 数据库名 character set utf8/gbk;<br>3.查询数据库详情<br>    - 格式: show create database 数据库名;<br>            show create database db1;<br>4.删除数据库<br>    - 格式: drop database 数据库名;<br>            drop database db2;</p>
+<h2 id="数据库基本练习"><a href="#数据库基本练习" class="headerlink" title="数据库基本练习"></a>数据库基本练习</h2><p>1.分别创建mydb1和mydb2 第一个是gbk 第二个是 utf8<br>    - 格式: create database mydb1 character set gbk;<br>            create database mydb2 character set utf8;<br>2.创建完查询所有数据库 检查是否存在<br>    - 格式: show databases;<br>3.分别查询每个数据库的字符集是否正确<br>    - 格式: show create database mydb1;<br>            show create databse mydb2;<br>4.先使用mydb1再使用mydb2<br>    - 格式: use mydb1;<br>            use mydb2;<br>5.删除两个数据库<br>    - 格式: drop database mydb1;<br>            drop database mydb2;</p>
+<h2 id="表相关"><a href="#表相关" class="headerlink" title="表相关"></a>表相关</h2><p>1.操作表相关的SQL,必须使用了某个数据库,不然就提示以下错误<br>    - 格式: No database selected<br>2.查询所有表<br>    - 格式: show tables;<br>3.创建表<br>    - 格式: create table 表名(字段名 类型,字段名 类型…..)charset=gbk/utf8;<br>            create table person(name varchar(10),age int)charset=utf8;<br>4.</p>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
     </div>
@@ -375,7 +417,7 @@
     
     <p><span class="copy-title">本文作者:</span><a  title="ZhYun1on9">ZhYun1on9</a></p>
     <p><span class="copy-title">发布时间:</span>2019-12-10, 13:20:09</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-10, 22:27:09</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-11, 00:02:31</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/10/MySQL%E7%9A%84%E4%BD%BF%E7%94%A8%E8%AF%AD%E6%B3%95/" title="MySQL数据库">http://yoursite.com/2019/12/10/MySQL%E7%9A%84%E4%BD%BF%E7%94%A8%E8%AF%AD%E6%B3%95/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
