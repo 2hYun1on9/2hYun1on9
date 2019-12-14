@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>ZhYun1on9</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="ZhYun1on9">
+  <title>JDBC | ZhYun1on9</title>
+  <meta name="keywords" content=" MySQL , 数据库 , JDBC ">
+  <meta name="description" content="JDBC | ZhYun1on9">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="子查询(嵌套查询)    格式: select 字段名 from 表名 where 字段名 运算符 (select 字段名 from 表名 where 条件);  查询工资最高的员工信息select * from emp where sal&#x3D;(select max(sal) from emp);    查询工资高于1号部门平均工资的员工信息select avg(sal) from emp wher">
 <meta property="og:type" content="article">
@@ -53,7 +53,7 @@
 </div>
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -256,12 +256,59 @@
         </div>
     </div>
 </aside>
-<div class="post index">
+<div class="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-JDBC" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#自言自语"><span class="toc-text">自言自语</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#突发奇想"><span class="toc-text">突发奇想</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <h1 class="article-title">JDBC</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a  data-rel="JDBC">JDBC</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a class="color1">MySQL</a>
+            
+            <a class="color4">数据库</a>
+            
+            <a class="color5">JDBC</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-12-15 01:47:54'>2019-12-14 23:23</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JDBC"><span class="toc-text">JDBC</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#如何使用JDBC"><span class="toc-text">如何使用JDBC</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SQL执行对象-Statement"><span class="toc-text">SQL执行对象 Statement</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据库连接池DBCP"><span class="toc-text">数据库连接池DBCP</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#登录功能实现步骤"><span class="toc-text">登录功能实现步骤:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#批量操作"><span class="toc-text">批量操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#分页查询"><span class="toc-text">分页查询</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#获取自增主键值"><span class="toc-text">获取自增主键值</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#元数据"><span class="toc-text">元数据</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -274,39 +321,285 @@
     }
 </style>
 </div>
-            <h1 id="自言自语"><a href="#自言自语" class="headerlink" title="自言自语"></a>自言自语</h1><h2 id="突发奇想"><a href="#突发奇想" class="headerlink" title="突发奇想"></a>突发奇想</h2><blockquote>
-<p>刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。<br>可以说只是为了有个电子笔记存档,还可以设计自己的风格或者喜欢的Demo样式,从而偷个懒写个博客<del>~</del></p>
-</blockquote>
-<p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>主要:</p>
-<ul>
-<li>java</li>
-<li>MySQL</li>
-<li>Oracle</li>
-<li>月亮与六便士 —- 毛姆</li>
-<li>海上钢琴师 —- 亚历山德罗.巴里科</li>
-<li>自卑与超越 —- 阿尔弗雷德.阿德勒</li>
-<li>阅读是一座随身携带的避难所 —- 毛姆</li>
-<li>吃掉那只青蛙 —-博恩.崔西</li>
-<li>内向性格的竞争力 —- 苏珊.凯恩</li>
-<li>让全世界都看见你 —- 亚历山德拉.列维特</li>
-<li>高效休息法 —- 久贺谷亮</li>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h1><ul>
+<li>java DataBase Connectivity : java数据库连接,JDBC是Sun工资提供用于java和数据连接的编程接口<h1 id="如何使用JDBC"><a href="#如何使用JDBC" class="headerlink" title="如何使用JDBC"></a>如何使用JDBC</h1></li>
+<li><ol>
+<li>创建Maven工程</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>在pom.xml文件中添加以下代码</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>创建Demo01 以下代码<pre><code>   // 1.注册驱动
+   Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
+   // 2.获取连接对象
+   // 导包时选择java.sql
+   Connection conn = DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/newdb3&quot;,&quot;root&quot;,&quot;qaz123&quot;);
+   System.out.println(conn);
+   // 3.创建SQL执行对象
+   Statement s = conn.createStatement();
+   // 4.执行SQL
+   String sql = &quot;create table jdbc1(id int,name varchar(10))&quot;;
+   s.executeUpdate(sql);
+   // 5.释放资源
+   conn.close();</code></pre></li>
+</ol>
+</li>
 </ul>
-<p>主要功能：</p>
-<ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad/手机等移动端适配</li>
-<li>页面全局快捷键 <a href='http://yelog.org/2017/03/24/3-hexo-shortcuts/' target="_blank" rel="noopener">3-hexo快捷键说明</a></li>
+<h1 id="SQL执行对象-Statement"><a href="#SQL执行对象-Statement" class="headerlink" title="SQL执行对象 Statement"></a>SQL执行对象 Statement</h1><ul>
+<li>execute(sql) 此方式可以执行任何的SQL语句,但是建议执行DDL包括create,drop,alter等</li>
+<li>executeUpdate(sql) 此方法用于执行增删改的SQL语句</li>
+<li>executeQuery(sql) 此方法用于执行查询的SQL</li>
+</ul>
+<h1 id="数据库连接池DBCP"><a href="#数据库连接池DBCP" class="headerlink" title="数据库连接池DBCP"></a>数据库连接池DBCP</h1><ul>
+<li><p>DBCP: DataBase Connection Pool</p>
+</li>
+<li><p>使用数据库连接池可以大大降低Web服务器和数据库服务器之间的连接次数从而提高执行效率</p>
+</li>
+<li><p>使用方法:    1. 在pom.xml文件中添加jar包坐标</p>
+<pre><code>    &lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;mysql&lt;/groupId&gt;
+        &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+        &lt;version&gt;5.1.6&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;commons-dbcp&lt;/groupId&gt;
+        &lt;artifactId&gt;commons-dbcp&lt;/artifactId&gt;
+        &lt;version&gt;1.4&lt;/version&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;</code></pre></li>
+<li><ol start="2">
+<li>在 src/main/resources下面添加 jdbc.properties文件<pre><code>url=jdbc:mysql://localhost:3306/newdb3
+username=root
+password=qaz123</code></pre></li>
+</ol>
+</li>
+<li><p>3: 创建 DBUitls.java 内容如下:</p>
+<pre><code>  private static BasicDataSource ds;
+  // 写到静态方法里面是为了让读取配置文件的代码
+  // 和创建连接池的代码只执行一次
+  static {
+      Properties p = new Properties();
+      InputStream ips = DBUtils.class.getClassLoader().getResourceAsStream(&quot;jdbc.properties&quot;);
+      try {
+          p.load(ips);
+      } catch (Exception e) {
+          e.printStackTrace();
+      }
+      String url = p.getProperty(&quot;url&quot;);
+      String username = p.getProperty(&quot;username&quot;);
+      String password = p.getProperty(&quot;password&quot;);
+
+      // 换成连接池
+      ds = new BasicDataSource();
+      // 设置数据库连接信息
+      ds.setUrl(url);
+      ds.setUsername(username);
+      ds.setPassword(password);
+      ds.setInitialSize(3);
+      ds.setMaxActive(5);
+  }
+  public static Connection getConn() throws SQLException {
+      return ds.getConnection();
+  }</code></pre></li>
+<li><p>4.数据库池连接</p>
+<pre><code>  //创建数据库连接池对象
+  BasicDataSource db = new BasicDataSource();
+  //设置数据库连接信息
+  ds.setUrl(&quot;jdbc:mysql://localhost:3306/newdb3&quot;);
+  ds.setUsername(&quot;root&quot;);
+  ds.setPassword(&quot;qaz123&quot;);
+  //设置初始连接数量
+  ds.setInitialSize(3);
+  //设置最大连接数量
+  ds.setMaxActive(5);
+  //跟连接池对象要连接
+  Connection conn = ds.getCononection();
+  System.out.println(conn);</code></pre></li>
+</ul>
+<h1 id="登录功能实现步骤"><a href="#登录功能实现步骤" class="headerlink" title="登录功能实现步骤:"></a>登录功能实现步骤:</h1><ul>
+<li><ol>
+<li>通过Scanner获取用户输入的username和password</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>通过getConn()代表获取连接对象</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>创建查询的SQL语句,里面的变量用?表示</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>通过已经创建好的SQL语句创建预编译的SQL执行对象</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>将用户输入的用户名和密码替换掉SQL中的?</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>执行SQL语句得到resultset对象</li>
+</ol>
+</li>
+<li><ol start="7">
+<li>while循环遍历resultset对象</li>
+</ol>
+</li>
+<li><ol start="8">
+<li>获取查询到的数量 如果大于0输出登录成功 否则输出登录失败.<pre><code>Scanner scan = new Scanner(System.in);
+   System.out.println(&quot;输入用户名:&quot;);
+   String username = scan.nextLine();
+   System.out.println(&quot;输入密码:&quot;);
+   String password = scan.nextLine();
+   try (Connection conn = DBUtils.getConn()){
+       String sql = &quot;select count(*) from user where username=? and password=?&quot;;
+       PreparedStatement ps = conn.prepareStatement(sql);
+       //替换 ?
+       ps.setString(1, username);
+       ps.setString(2, password);
+       ResultSet rs = ps.executeQuery();
+       while(rs.next()) {
+           int count = rs.getInt(1);
+           if(count&gt;0) {
+               System.out.println(&quot;成功&quot;);
+           }else {
+               System.out.println(&quot;失败&quot;);
+           }
+       }
+   } catch (Exception e) {
+       e.printStackTrace();
+   }
+}
+}</code></pre></li>
+</ol>
+</li>
+</ul>
+<h1 id="批量操作"><a href="#批量操作" class="headerlink" title="批量操作"></a>批量操作</h1><ul>
+<li>将多条SQL语句的多次数据传输合并成一次数据传输,从而提高执行效率</li>
+<li>如果SQL语句中有变量就用预编译SQL执行对象<pre><code>  try (Connection conn = DBUtils.getConn()){
+      String sql = &quot;insert into user values(null,?,?)&quot;;
+      PreparedStatement ps = conn.prepareStatement(sql);
+      ps.setString(1,username);
+      ps.setString(2,password);
+      //添加到批量操作
+      ps.addBatch(sql);
+      //执行
+      ps.executeBatch();
+  } catch (Exception e) {
+      e.printStackTrace();
+  }</code></pre></li>
+<li>如果没有变量使用Statement执行<pre><code>  try (Connection conn = DBUtils.getConn()){
+      String sql = &quot;insert into user values(null,&#39;aaa&#39;,&#39;aaa&#39;)&quot;;
+      String sql1 = &quot;insert into user values(null,&#39;bbb&#39;,&#39;bbb&#39;)&quot;;
+      String sql2 = &quot;insert into user values(null,&#39;ccc&#39;,&#39;ccc&#39;)&quot;;
+      Statement s = conn.createStatement();
+      //添加到批量操作
+      s.addBatch(sql2);
+      s.addBatch(sql1);
+      s.addBatch(sql);
+      //执行
+      s.executeBatch();
+  } catch (Exception e) {
+      e.printStackTrace();
+  }</code></pre></li>
+</ul>
+<h1 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h1><pre><code>    Scanner scan = new Scanner(System.in);
+    System.out.println(&quot;请输入查询页数&quot;);
+        int page = scan.nextInt();
+        System.out.println(&quot;请输入查询的条数&quot;);
+        int count = scan.nextInt();
+        try (Connection conn = DBUtils.getConn()){
+            //创建SQL语句
+            String sql = &quot;select username from user limit ?,?&quot;;
+            //创建预编译SQL执行对象
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, (page-1)*count);
+            ps.setInt(2, count);
+            ResultSet rs = ps.executeQuery();
+            //遍历输出
+            while(rs.next()) {
+                String username = rs.getString(&quot;username&quot;);
+                System.out.println(username);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }</code></pre><h1 id="获取自增主键值"><a href="#获取自增主键值" class="headerlink" title="获取自增主键值"></a>获取自增主键值</h1><pre><code>            try(Connection conn = DBUtils.getConn()){
+            String sql = &quot;insert into user values(null,&#39;Tom&#39;,&#39;123456&#39;)&quot;;
+            Statement s = conn.createStatement();
+            s.executeUpdate(sql,Statement.NO_GENERATED_KEYS);
+            //获取自增主键
+            ResultSet rs = s.getGeneratedKeys();
+            while(rs.next()) {
+                //得到返回的唯一ID值
+                int id = rs.getInt(1);
+                System.out.println(id);
+            }
+        }</code></pre><h1 id="元数据"><a href="#元数据" class="headerlink" title="元数据"></a>元数据</h1><ul>
+<li>数据库元数据</li>
+<li>表元数据<pre><code>          try (Connection conn = DBUtils.getConn()){
+          //获取数据库的元数据对象
+          DatabaseMetaData dbmd = conn.getMetaData();
+          System.out.println(&quot;数据库名称:&quot;+dbmd.getDatabaseProductName());
+          System.out.println(&quot;数据库驱动版本:&quot;+dbmd.getDriverVersion());
+          System.out.println(&quot;数据库用户名:&quot;+dbmd.getUserName());
+          //获取表元数据 需要先写查询
+          String sql = &quot;select * from emp&quot;;
+          Statement s = conn.createStatement();
+          ResultSet rs = s.executeQuery(sql);
+          //得到表元数据对象
+          ResultSetMetaData rsmd = rs.getMetaData();
+          //得到表字段数量
+          int count = rsmd.getColumnCount();
+          //遍历每个字段名和类型
+          for (int i = 0; i &lt; count; i++) {
+              String name = rsmd.getCatalogName(i+1);
+              String type = rsmd.getColumnTypeName(i+1);
+              System.out.println(name+&quot;:&quot;+type);
+          }
+      } catch (Exception e) {
+          e.printStackTrace();
+      }</code></pre></li>
 </ul>
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>JDBC</p>
+    
+    <p><span class="copy-title">本文作者:</span><a  title="ZhYun1on9">ZhYun1on9</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-12-14, 23:23:33</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-15, 01:47:54</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/14/JDBC/" title="JDBC">http://yoursite.com/2019/12/14/JDBC/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">©2016-2019 Yelog</p>
