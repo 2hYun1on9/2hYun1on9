@@ -6,17 +6,18 @@
   <meta name="keywords" content=" MySQL , 数据库 ">
   <meta name="description" content="MySQL数据库Day2 | ZhYun1on9">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="子查询(嵌套查询)    格式: select 字段名 from 表名 where 字段名 运算符 (select 字段名 from 表名 where 条件);  查询工资最高的员工信息select * from emp where sal&#x3D;(select max(sal) from emp);    查询工资高于1号部门平均工资的员工信息select avg(sal) from emp wher">
+<meta name="description" content="JDBC java DataBase Connectivity : java数据库连接,JDBC是Sun工资提供用于java和数据连接的编程接口如何使用JDBC  创建Maven工程    在pom.xml文件中添加以下代码    创建Demo01 以下代码   &#x2F;&#x2F; 1.注册驱动    Class.forName(&quot;com.mysql.jdbc.Driver&quot;);    &#x2F;&#x2F;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL数据库Day3">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;13&#x2F;MySQL%E6%95%B0%E6%8D%AE%E5%BA%93Day3&#x2F;index.html">
+<meta property="og:title" content="JDBC">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;14&#x2F;JDBC&#x2F;index.html">
 <meta property="og:site_name" content="ZhYun1on9">
-<meta property="og:description" content="子查询(嵌套查询)    格式: select 字段名 from 表名 where 字段名 运算符 (select 字段名 from 表名 where 条件);  查询工资最高的员工信息select * from emp where sal&#x3D;(select max(sal) from emp);    查询工资高于1号部门平均工资的员工信息select avg(sal) from emp wher">
-<meta property="article:published_time" content="2019-12-12T16:39:16.620Z">
-<meta property="article:modified_time" content="2019-12-14T15:24:24.257Z">
+<meta property="og:description" content="JDBC java DataBase Connectivity : java数据库连接,JDBC是Sun工资提供用于java和数据连接的编程接口如何使用JDBC  创建Maven工程    在pom.xml文件中添加以下代码    创建Demo01 以下代码   &#x2F;&#x2F; 1.注册驱动    Class.forName(&quot;com.mysql.jdbc.Driver&quot;);    &#x2F;&#x2F;">
+<meta property="article:published_time" content="2019-12-14T15:23:33.349Z">
+<meta property="article:modified_time" content="2019-12-15T12:28:14.391Z">
 <meta property="article:author" content="ZhYun1on9">
 <meta property="article:tag" content="MySQL">
 <meta property="article:tag" content="数据库">
+<meta property="article:tag" content="JDBC">
 <meta name="twitter:card" content="summary">
 
 
@@ -134,7 +135,7 @@
 
 
 <ul>
-    <li><div class="all active">全部文章<small>(4)</small></div></li>
+    <li><div class="all active">全部文章<small>(6)</small></div></li>
     
         
             
@@ -152,6 +153,14 @@
             
         
     
+        
+            
+            <li><div data-rel="Servlet">Servlet<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -162,7 +171,7 @@
     </div>
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="4">
+<input type="hidden" id="yelog_site_posts_number" value="6">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -208,6 +217,18 @@
         <a class="color5">JDBC</a>
     </li>
     
+    <li class="article-tag-list-item">
+        <a class="color4">Web</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">Servlet</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">Tomcat</a>
+    </li>
+    
     <div class="clearfix"></div>
 </div>
 
@@ -244,6 +265,22 @@
            data-author="" >
             <span class="post-title" title="JDBC">JDBC</span>
             <span class="post-date" title="2019-12-14 23:23:33">2019/12/14</span>
+        </a>
+        
+        <a  class="Servlet "
+           href="/2019/12/15/ServletDay1/"
+           data-tag="Web,Servlet,Tomcat"
+           data-author="" >
+            <span class="post-title" title="ServletDay01">ServletDay01</span>
+            <span class="post-date" title="2019-12-15 08:52:23">2019/12/15</span>
+        </a>
+        
+        <a  class="Servlet "
+           href="/2019/12/15/ServletDay2/"
+           data-tag="Web,Servlet,Tomcat"
+           data-author="" >
+            <span class="post-title" title="ServletDay02">ServletDay02</span>
+            <span class="post-date" title="2019-12-15 22:01:08">2019/12/15</span>
         </a>
         
     </nav>
@@ -534,7 +571,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#MySQL','#数据库','#JDBC',],
+            'data': ['#MySQL','#数据库','#JDBC','#Web','#Servlet','#Tomcat',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

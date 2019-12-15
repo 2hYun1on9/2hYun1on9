@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>MySQL数据库Day1 | ZhYun1on9</title>
-  <meta name="keywords" content=" MySQL , 数据库 ">
-  <meta name="description" content="MySQL数据库Day1 | ZhYun1on9">
+  <title>ServletDay01 | ZhYun1on9</title>
+  <meta name="keywords" content=" Web , Servlet , Tomcat ">
+  <meta name="description" content="ServletDay01 | ZhYun1on9">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="JDBC java DataBase Connectivity : java数据库连接,JDBC是Sun工资提供用于java和数据连接的编程接口如何使用JDBC  创建Maven工程    在pom.xml文件中添加以下代码    创建Demo01 以下代码   &#x2F;&#x2F; 1.注册驱动    Class.forName(&quot;com.mysql.jdbc.Driver&quot;);    &#x2F;&#x2F;">
 <meta property="og:type" content="article">
@@ -295,9 +295,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-MySQL数据库Day1" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-ServletDay1" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">MySQL数据库Day1</h1>
+        <h1 class="article-title">ServletDay01</h1>
     
     <div class="article-meta">
         
@@ -305,23 +305,25 @@
         
         <span class="book">
             
-                <a  data-rel="数据库">数据库</a>
+                <a  data-rel="Servlet">Servlet</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a class="color1">MySQL</a>
+            <a class="color4">Web</a>
             
-            <a class="color4">数据库</a>
+            <a class="color3">Servlet</a>
+            
+            <a class="color2">Tomcat</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-12 18:51:36'>2019-12-10 13:20</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-15 20:44:41'>2019-12-15 08:52</time>
         
     </div>
     <div class="article-meta">
@@ -343,7 +345,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数据库"><span class="toc-text">数据库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SQL"><span class="toc-text">SQL</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#如何连接MySQL软件"><span class="toc-text">如何连接MySQL软件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DDL-数据定义语言"><span class="toc-text">DDL 数据定义语言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库相关SQL语句"><span class="toc-text">数据库相关SQL语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库基本练习"><span class="toc-text">数据库基本练习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表相关"><span class="toc-text">表相关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库和表相关联系"><span class="toc-text">数据库和表相关联系</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DML数据操作语言"><span class="toc-text">DML数据操作语言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#练习1"><span class="toc-text">练习1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#练习2"><span class="toc-text">练习2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据类型"><span class="toc-text">数据类型</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tomcat"><span class="toc-text">Tomcat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网络架构CS和BS"><span class="toc-text">网络架构CS和BS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是服务器"><span class="toc-text">什么是服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web服务软件做了什么事儿"><span class="toc-text">Web服务软件做了什么事儿?</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#如何使用Tomcat"><span class="toc-text">如何使用Tomcat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Serlet响应流程"><span class="toc-text">Serlet响应流程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#浏览器发出请求的方式"><span class="toc-text">浏览器发出请求的方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#请求方式"><span class="toc-text">请求方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#get请求参数中出现中文解决方案"><span class="toc-text">get请求参数中出现中文解决方案</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -359,240 +361,58 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><ul>
-<li><p>以前通过IO技术对数据进行增删改查,相当于自己写的数据库软件,只不过功能和性能非常低,如果说每次开发一个新的项目都写一遍数据增删改查相关的代码,开发效率低并且不能保证性能问题,数据库软件就是用于解决此问题.</p>
-</li>
-<li><p>DBMS: DataBase(数据库) Management(管理) System(系统) 俗称数据库软件, 常见的DBMS有:</p>
+        <h1 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h1><ul>
+<li>安装Tomcat手册: <a href="http://doc.canglaoshi.org/" target="_blank" rel="noopener">Tomcat</a></li>
+</ul>
+<h1 id="网络架构CS和BS"><a href="#网络架构CS和BS" class="headerlink" title="网络架构CS和BS"></a>网络架构CS和BS</h1><ul>
+<li>CS: Client Server客户端服务器,客户端指:PC客户端 手机客户端<br>  优点: 执行效率略高,有丰富的展示效果 </li>
+<li>BS: Browser Server浏览器服务器<br>  优点: 节省设备内存,跨平台,版本更新便利</li>
+</ul>
+<h2 id="什么是服务器"><a href="#什么是服务器" class="headerlink" title="什么是服务器"></a>什么是服务器</h2><ul>
+<li>服务器就是一台高性能的电脑</li>
+<li>web服务器:在高性能电脑上安装了提供web服务的软件</li>
+<li>邮件服务器:在高性能电脑上安装了提供邮件收发服务的软件</li>
+<li>数据库服务器:在高性能电脑上安装了提供数据服务的软件(MySQL/Oracle..)</li>
+<li>ftp服务器:在高性能电脑上安装了提供文件上传下载服务的软件</li>
+<li>web服务软件也称为web容器,用于装各种Servle</li>
+</ul>
+<h2 id="Web服务软件做了什么事儿"><a href="#Web服务软件做了什么事儿" class="headerlink" title="Web服务软件做了什么事儿?"></a>Web服务软件做了什么事儿?</h2><ul>
+<li>负责建立底层的网络连接,负责将客户端请求的文件返回给客户端</li>
+<li>负责根据请求的路径找到对应的Servlet(负责扩展web服务软件功能的组件)</li>
+<li>web服务软件也称为web容器,用于装各种Servlet</li>
+</ul>
+<h1 id="如何使用Tomcat"><a href="#如何使用Tomcat" class="headerlink" title="如何使用Tomcat"></a>如何使用Tomcat</h1><ul>
+<li>以后开发web工程需要在Project Explorer视图下,如果没有从window-&gt;show view-&gt;other中搜索</li>
+<li>将Tomcat和Eclipse进行关联:</li>
+</ul>
 <ol>
-<li><p>MySQL: Oracle公司产品, 08年被Sun公司收购,09年Sun公司被Oracle收购, 开源产品,   原MySQL团队从Oracle离职创建MariaDB , 市场占有率第一.</p>
-</li>
-<li><p>Oracle:闭源产品,Oracle公司产品,拉里.埃里森 32岁创业. 市场占有率第二. 性能最高 价格最贵</p>
-</li>
-<li><p>SQLServer: 微软公司产品,闭源,市场占有率第三,主要应用在微软整套解决方案中.</p>
-</li>
-<li><p>DB2: IBM公司产品, 闭源产品, 应用在IBM公司的整套解决方案中 </p>
-</li>
-<li><p>SQLite: 轻量级数据库,主要应用在移动设备(手机)和嵌入式设备中(各种智能设备) 安装包只有几十k</p>
-<p>开发网站需要用到哪些东西:  开发语言+Web服务软件+操作系统+数据库软件</p>
-</li>
+<li>下载Tomcat安装包和源代码   doc.tedu.cn</li>
+<li>将下载的两个压缩包放到d:java文件夹下(linux系统放到/home/java/) 解压在当前文件夹</li>
+<li>配置Eclipse:<br> eclipse-&gt;window-&gt;prefrences-&gt;server-&gt;runtime Enviroments-&gt;清空里面的内容-&gt;add-&gt;找到Tomcat 7.0-&gt;Browse找到java文件夹下apache-tomcat-7.0.96 完成即可!</li>
+<li>在servers窗口中点击超链接 添加Tomcat7.0  选中7.0直接ok即可</li>
+<li>添加完之后双击添加的Tomcat7.0 修改单选为中间的一个 保存关闭</li>
+<li>在Tomcat7.0上右键 Start 启动服务器</li>
+<li>地址栏中访问 localhost:8080<br> 如果能看见一只猫则说明成功!</li>
 </ol>
-</li>
-<li><p>开源和闭源:</p>
-<ol>
-<li>开源: 开放源代码, 盈利方式: 靠卖服务, 开源产品有技术大拿无偿升级维护.</li>
-<li>闭源: 不开放源代码, 盈利方式: 靠卖产品+卖服务, 有技术大拿攻击,但是会养一帮人维护升级.</li>
-</ol>
-</li>
-</ul>
-<h1 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h1><ul>
-<li>Structured结构化 Query查询 Language语言,负责程序员和数据库软件之间的沟通</li>
-</ul>
-<h1 id="如何连接MySQL软件"><a href="#如何连接MySQL软件" class="headerlink" title="如何连接MySQL软件"></a>如何连接MySQL软件</h1><ul>
-<li>Linux:桌面空白右键打开终端<pre><code class="mysql">  mysql -uroot -p 回车 输入密码 回车</code></pre>
-</li>
-<li>Windows: cmd<pre><code class="mysql"> mysql -uroot -p 回车 输入密码 回车
- Ctrl+C 退出</code></pre>
-</li>
-</ul>
-<h1 id="DDL-数据定义语言"><a href="#DDL-数据定义语言" class="headerlink" title="DDL 数据定义语言"></a>DDL 数据定义语言</h1><ul>
-<li>数据库软件中保存数据需要先建库再建表</li>
-</ul>
-<h2 id="数据库相关SQL语句"><a href="#数据库相关SQL语句" class="headerlink" title="数据库相关SQL语句"></a>数据库相关SQL语句</h2><p>1.查询所有数据库</p>
-<pre><code class="mysql">格式: show databases;</code></pre>
-<p>2.创建数据库</p>
-<pre><code class="mysql"> 格式: create database 数据库名 character set utf8/gbk;</code></pre>
-<p>3.查询数据库详情</p>
-<pre><code class="mysql">格式: show create database 数据库名;
-     show create database db1;</code></pre>
-<p>4.删除数据库</p>
-<pre><code class="mysql">格式: drop database 数据库名;
-     drop database db2;</code></pre>
-<h2 id="数据库基本练习"><a href="#数据库基本练习" class="headerlink" title="数据库基本练习"></a>数据库基本练习</h2><p>1.分别创建mydb1和mydb2 第一个是gbk 第二个是 utf8</p>
-<pre><code class="mysql">格式: create database mydb1 character set gbk;
-     create database mydb2 character set utf8;</code></pre>
-<p>2.创建完查询所有数据库 检查是否存在</p>
-<pre><code class="mysql">格式: show databases;</code></pre>
-<p>3.分别查询每个数据库的字符集是否正确</p>
-<pre><code class="mysql">格式:
-    show create database mydb1;
-    show create database mydb2;</code></pre>
-<p>4.先使用mydb1再使用mydb2</p>
-<pre><code class="mysql">格式: 
-    use mydb1;
-    use mydb2;</code></pre>
-<p> 5.删除两个数据库</p>
-<pre><code class="mysql">格式: 
-    drop database mydb1; 
-    drop database mydb2;</code></pre>
-<h2 id="表相关"><a href="#表相关" class="headerlink" title="表相关"></a>表相关</h2><p>1.操作表相关的SQL,必须使用了某个数据库,不然就提示以下错误</p>
-<pre><code class="mysql">格式: 
-    No database selected</code></pre>
-<p>2.查询所有表</p>
-<pre><code class="mysql">格式: 
-    show tables;</code></pre>
-<p>3.创建表</p>
-<pre><code class="mysql">格式: 
-    create table 表名(字段名 类型,字段名 类型.....)charset=gbk/utf8;
-    create table person(name varchar(10),age int)charset=utf8;</code></pre>
-<p>4.删除表</p>
-<pre><code class="mysql">格式:
-    drop table 表名;
-    drop table student;</code></pre>
-<p>5.添加表字段</p>
-<pre><code class="mysql">格式: 
-    alter table 表名 add 字段名 字段类型;(默认是添加在最后面)
-    alter table person add gender varchar(10);
-最前面添加格式:
-    alter table 表名 add 字段名 字段类型 first;
-    alter table person add id int first;
-在xxx字段的后面: 
-    alter table 表名 add 字段名 字段类型 after xxx;
-    alter table person add get varchar(10) after xxx;</code></pre>
-<p>6.修改表名</p>
-<pre><code class="mysql">格式: 
-    rename table 原名 to 新名;
-    rename table person to persons;</code></pre>
-<p>7.删除表字段</p>
-<pre><code class="mysql">格式: 
-    alter table 表名 drop 字段名;</code></pre>
-<p>8.修改表字段</p>
-<pre><code class="mysql">    alter table 表名 change 原名 新名 新类型;
-    alter table person change salary gender varchar(10);</code></pre>
-<h2 id="数据库和表相关联系"><a href="#数据库和表相关联系" class="headerlink" title="数据库和表相关联系"></a>数据库和表相关联系</h2><ul>
-<li><p>1.创建数据库mydb1,字符集为utf8,并使用该数据库</p>
-<pre><code class="mysql">  create databes mydb1 character set utf8;
-  use mydb1;</code></pre>
-</li>
-<li><p>2.在mydb1中创建员工表emp,字段有name,字符集为utf8</p>
-<pre><code class="mysql">  create table emp(name varchar(10)) charset=utf8;</code></pre>
-</li>
-<li><p>3.添加表字段age在最后面(如果后面不使用after会默认添加在最后)</p>
-<pre><code class="mysql">  alter table emp add age int after name;
-  alter table emp add age int;</code></pre>
-</li>
-<li><p>4.添加id字段在最前面</p>
-<pre><code class="mysql">  alter table emp add id int first;</code></pre>
-</li>
-<li><p>5.添加sal字段在name后面</p>
-<pre><code class="mysql">  alter table emp add sal double after name;</code></pre>
-</li>
-<li><p>6.修改字段为sal为salary</p>
-<pre><code class="mysql">  alter table emp change sal salary double;</code></pre>
-</li>
-<li><p>7.删除age字段</p>
-<pre><code class="mysql">  alter table emp drop age;</code></pre>
-</li>
-<li><p>8.删除emp表</p>
-<pre><code class="mysql">  drop table emp;</code></pre>
-</li>
-<li><p>9.删除数据库</p>
-<pre><code class="mysql">  drop database mydb1;</code></pre>
-</li>
-</ul>
-<h1 id="DML数据操作语言"><a href="#DML数据操作语言" class="headerlink" title="DML数据操作语言"></a>DML数据操作语言</h1><pre><code class="mysql">    create database mydb1 character set utf8;
-    create table person(id int,name varchar(10),age int)charset=utf8;</code></pre>
 <ul>
-<li><p>1.插入数据</p>
-<pre><code class="mysql">  全表插入:(要求值的数量和顺序必须和表字段一致)
-      insert into 表名 values(值1,值2,值3);
-  指定字段格式:(要求值的数量和顺序必须和前面的字段一致)
-      insert into 表名(字段1,字段2) values(值1,值2);
-  批量插入:
-      insert into 表名 values(值1,值2,值3),(值1,值2,值3);
-  中文问题:
-      insert into 表名 values(1,&#39;司马懿&#39;,65);
-  如果报错:
-      set names gbk;</code></pre>
-</li>
-<li><p>2.查询数据</p>
-<pre><code class="mysql">格式:
-  select * from 表名;
-  select 字段名 from 表名;</code></pre>
-</li>
-<li><p>3.修改数据</p>
-<pre><code class="mysql">格式:
-  update 表名 set 字段名=xxx where 条件;</code></pre>
-</li>
-<li><p>4.删除数据</p>
-<pre><code class="mysql">  delete from 表名 where 条件;</code></pre>
-</li>
+<li>删除Tomcat</li>
 </ul>
-<h2 id="练习1"><a href="#练习1" class="headerlink" title="练习1"></a>练习1</h2><ul>
-<li><p>1.创建英雄hero表 id 名字name 类型type 价格money 字符集utf8;</p>
-<pre><code class="mysql">  create table hero(id int,name varchar(10),type varchar(10),money double);</code></pre>
-</li>
-<li><p>2.保存以下数据:</p>
-<pre><code class="mysql">  insert into hero values(1,&#39;诸葛亮&#39;,&#39;法师&#39;,18888),(2,&#39;周瑜&#39;,&#39;法师&#39;,13888),(3,&#39;孙悟空&#39;,&#39;打野&#39;,18888),(4,&#39;小乔&#39;,&#39;法师&#39;,13888),(5,&#39;黄忠&#39;,&#39;射手&#39;,8888),(6,&#39;刘备&#39;,&#39;战士&#39;,6888);</code></pre>
-</li>
-<li><p>3.修改所有18888为28888</p>
-<pre><code class="mysql">  update hero set money=28888 where money=18888; </code></pre>
-</li>
-<li><p>4.修改法师为战士</p>
-<pre><code class="mysql">  update hero set type=&#39;法师&#39; where type=&#39;战士&#39;;</code></pre>
-</li>
-<li><p>5.删除价格为6888的英雄</p>
-<pre><code class="mysql">  delete from hero where money=6888;</code></pre>
-</li>
-<li><p>6.修改小乔为猪八戒</p>
-<pre><code class="mysql">  update hero set name=&#39;猪八戒&#39; where name=&#39;小乔&#39;;</code></pre>
-</li>
-<li><p>7.删除价格低于15000的英雄</p>
-<pre><code class="mysql">  delete from hero where money&lt;15000;</code></pre>
-</li>
-<li><p>8.添加性别gender字段在name的后面</p>
-<pre><code class="mysql">  alter table hero add gender varchar(10) after name;</code></pre>
-</li>
-<li><p>9.修改所有英雄的性别为男</p>
-<pre><code class="mysql">  update hero set gender=&#39;男&#39;;</code></pre>
-</li>
-<li><p>10.删除所有数据</p>
-<pre><code class="mysql">  delete from hero;</code></pre>
-</li>
-<li><p>11.删除表</p>
-<pre><code>  drop table hero;</code></pre><h2 id="练习2"><a href="#练习2" class="headerlink" title="练习2"></a>练习2</h2></li>
-<li><p>1.创建数据库 mydb2,字符集utf8,并使用该数据库</p>
-<pre><code>  create database mydb2 character utf8;</code></pre></li>
-<li><p>2.在数据库中创建员工表emp 字段: id,name,sal,deptid 字符集utf8</p>
-<pre><code>  create table emp(id int,name varchar(10),sal double,deptid int)charset=utf8;</code></pre></li>
-<li><p>3.创建部门表dept 字段: id,name,loc(部门地点) 字符集utf8</p>
-<pre><code>  create table dept(id int,name varchar(10),loc varchar(10))charset=utf8;</code></pre></li>
-<li><p>4.部门表中插入以下数据:</p>
-<pre><code>  1 神仙部 天庭
-  2 妖怪部 盘丝洞</code></pre></li>
-<li><p>5.员工表中插入以下数据:</p>
-<pre><code>  1 孙悟空 5000 1
-  2 八戒 2000  1
-  3 蜘蛛精 8000 2
-  4 白骨精 9000 2</code></pre></li>
-<li><p>6.查询工资6000以下的员工姓名和工资</p>
-<pre><code>  select ename,sal from emp where  sal&gt;6000;</code></pre></li>
-<li><p>7.修改神仙部的名字为取经部</p>
-<pre><code>  update dept set name=&#39;取经部&#39; where name=&#39;神仙部&#39;;</code></pre></li>
-<li><p>8.给员工表添加奖金comm字段(默认插入最后)</p>
-<pre><code>  alter table emp add comm double;</code></pre></li>
-<li><p>9.修改部门id为1的奖金为500</p>
-<pre><code>  update emp set comm=500 where deptid=1;</code></pre></li>
-<li><p>10.把取经部门的地址改成五台山</p>
-<pre><code>  update dept set loc=&#39;五台山&#39; whete loc=&#39;取经部&#39;;</code></pre></li>
-</ul>
-<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ul>
-<li><p>1.整数: int 和 bigint(等效于java中的long)</p>
-</li>
-<li><p>2.浮点数:double(m,d) m代表总长度 d代表小数长度.超高精度的浮点数decimal(m,d),只涉及到超高精度运算时使用</p>
-<pre><code>  如: 124,2313        m=7 d=4</code></pre></li>
-<li><p>3.字符串:</p>
-<pre><code>  char(m): 固定长度,m=10 &quot;abc&quot;占10,执行效率较高,最大长度255
-  varchar(m): 可变长度,m=10 &quot;abc&quot;占3,更节省资源,最大长度65535但是超过255建议使用text
-  text(m): 可变长度,最大65535</code></pre></li>
-<li><p>4.日期:</p>
-<pre><code>  date: 只能保存年月日
-  time: 只能保存时分秒
-  datetime: 默认值为null,最大值:9999-12-31
-  timestamp(时间戳): 默认值为当前系统时间,最大值: 2038-1-19
-  create table tdate(t1 data,t2 time,t3 datetime,t4 timestamp);
-  insert into tdata values(&quot;2019-12-12&quot;,null,null,null);
-  insert into t_data values(null,&quot;14:22:43&quot;,&quot;2019-12-12 14:24:21&quot;,null);</code></pre></li>
-</ul>
+<ol>
+<li>在servers中 Tomcat 7.0 上右键 Delete</li>
+<li>eclipse-&gt;window-&gt;prefrences-&gt;server-&gt;runtime Enviroments-&gt;清空里面的内容</li>
+<li>把java文件夹中的apache-tomcat-7.0.96文件夹删除 重新解压一份</li>
+</ol>
+<h1 id="Serlet响应流程"><a href="#Serlet响应流程" class="headerlink" title="Serlet响应流程"></a>Serlet响应流程</h1><ol>
+<li>请求从客户端浏览器发出 </li>
+<li>请求被Tomcat拦截到, 得到请求的子路径去web.xml中找到对应的Servlet完整类名</li>
+<li>得到类名后通过反射技术将该Servlet实例化</li>
+<li>实例化后调用对象中的service方法</li>
+</ol>
+<h1 id="浏览器发出请求的方式"><a href="#浏览器发出请求的方式" class="headerlink" title="浏览器发出请求的方式"></a>浏览器发出请求的方式</h1><ol>
+<li>浏览器地址栏中写请求路径 回车后发出请求    get</li>
+<li>在页面中通过超链接发出请求     get</li>
+<li>在页面中通过表单发出请求    默认get     get/post<h3 id="请求方式"><a href="#请求方式" class="headerlink" title="请求方式"></a>请求方式</h3>get:请求参数在请求地址的后面<br>post:请求参数在请求体里面<h3 id="get请求参数中出现中文解决方案"><a href="#get请求参数中出现中文解决方案" class="headerlink" title="get请求参数中出现中文解决方案"></a>get请求参数中出现中文解决方案</h3>找到Servers工程中的server.xml文件 找到65行 添加以下内容<br> &lt;Connector URIEncoding=”UTF-8”<br>Tomcat版本8.0及以上版本不存在此问题</li>
+</ol>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -606,12 +426,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>MySQL数据库Day1</p>
+    <p><span class="copy-title">文章标题:</span>ServletDay01</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="ZhYun1on9">ZhYun1on9</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-12-10, 13:20:09</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-12, 18:51:36</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/10/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93Day1/" title="MySQL数据库Day1">http://yoursite.com/2019/12/10/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93Day1/</a>
+    <p><span class="copy-title">发布时间:</span>2019-12-15, 08:52:23</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-15, 20:44:41</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/15/ServletDay1/" title="ServletDay01">http://yoursite.com/2019/12/15/ServletDay1/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
