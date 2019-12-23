@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>ServletDay01 | ZhYun1on9</title>
-  <meta name="keywords" content=" Web , Servlet , Tomcat ">
-  <meta name="description" content="ServletDay01 | ZhYun1on9">
+  <title>Java包装类 | ZhYun1on9</title>
+  <meta name="keywords" content=" Java , 包装类 , 常用方法 ">
+  <meta name="description" content="Java包装类 | ZhYun1on9">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Thymeleaf Thymeleaf是一个目前比较流行的框架之一,功能是将html页面作为一个模板,并根据页面中的特殊标记,对页面中的内容进行修改或替换.如何使用Thymeleaf   添加相关的jar包坐标 &lt;dependency&gt;      &lt;groupId&gt;org.thymeleaf&lt;&#x2F;groupId&gt;      &lt;artifactId&gt;th">
 <meta property="og:type" content="article">
@@ -383,9 +383,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-ServletDay01" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Java包装类" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">ServletDay01</h1>
+        <h1 class="article-title">Java包装类</h1>
     
     <div class="article-meta">
         
@@ -393,25 +393,25 @@
         
         <span class="book">
             
-                <a  data-rel="Servlet">Servlet</a>
+                <a  data-rel="Java">Java</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a class="color4">Web</a>
+            <a class="color5">Java</a>
             
-            <a class="color3">Servlet</a>
+            <a class="color4">包装类</a>
             
-            <a class="color2">Tomcat</a>
+            <a class="color5">常用方法</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-15 20:44:41'>2019-12-15 08:52</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-21 14:42:26'>2019-12-21 11:52</time>
         
     </div>
     <div class="article-meta">
@@ -433,7 +433,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tomcat"><span class="toc-text">Tomcat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网络架构CS和BS"><span class="toc-text">网络架构CS和BS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是服务器"><span class="toc-text">什么是服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web服务软件做了什么事儿"><span class="toc-text">Web服务软件做了什么事儿?</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#如何使用Tomcat"><span class="toc-text">如何使用Tomcat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Serlet响应流程"><span class="toc-text">Serlet响应流程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#浏览器发出请求的方式"><span class="toc-text">浏览器发出请求的方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#请求方式"><span class="toc-text">请求方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#get请求参数中出现中文解决方案"><span class="toc-text">get请求参数中出现中文解决方案</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#包装类"><span class="toc-text">包装类</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -449,58 +449,40 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h1><ul>
-<li>安装Tomcat手册: <a href="http://doc.canglaoshi.org/" target="_blank" rel="noopener">Tomcat</a></li>
+        <h1 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h1><ul>
+<li>包装类是为了解决基本类型不能直接参与面向对象,开发问题而产生的,使得基本类型可以以对象的形式存在</li>
+<li>自动装箱特性:<pre><code>  int a = 1;
+  // 这里编译器在编译时会将代码改成
+  // Integer i = Integer.valueOf(a);
+  Integer i =a;</code></pre></li>
+<li>自动拆箱特性:<pre><code>  // 代码触发了自动拆箱特性.
+  // a = i.intValue();
+  a = i;</code></pre><table>
+<thead>
+<tr>
+<th align="center">返回值</th>
+<th align="center">方法和说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">int</td>
+<td align="center">intValue();将包装类转换成基本类型</td>
+</tr>
+<tr>
+<td align="center">int</td>
+<td align="center">parseInt(String s); 将字符串解析成int类型(前提必须是字符串内容必须是相同类型 否则会抛出异常)</td>
+</tr>
+<tr>
+<td align="center">double</td>
+<td align="center">parseDouble(String s);</td>
+</tr>
+<tr>
+<td align="center">Object</td>
+<td align="center">valueOf(Object o); 将基本类型转换成包装类</td>
+</tr>
+</tbody></table>
+</li>
 </ul>
-<h1 id="网络架构CS和BS"><a href="#网络架构CS和BS" class="headerlink" title="网络架构CS和BS"></a>网络架构CS和BS</h1><ul>
-<li>CS: Client Server客户端服务器,客户端指:PC客户端 手机客户端<br>  优点: 执行效率略高,有丰富的展示效果 </li>
-<li>BS: Browser Server浏览器服务器<br>  优点: 节省设备内存,跨平台,版本更新便利</li>
-</ul>
-<h2 id="什么是服务器"><a href="#什么是服务器" class="headerlink" title="什么是服务器"></a>什么是服务器</h2><ul>
-<li>服务器就是一台高性能的电脑</li>
-<li>web服务器:在高性能电脑上安装了提供web服务的软件</li>
-<li>邮件服务器:在高性能电脑上安装了提供邮件收发服务的软件</li>
-<li>数据库服务器:在高性能电脑上安装了提供数据服务的软件(MySQL/Oracle..)</li>
-<li>ftp服务器:在高性能电脑上安装了提供文件上传下载服务的软件</li>
-<li>web服务软件也称为web容器,用于装各种Servle</li>
-</ul>
-<h2 id="Web服务软件做了什么事儿"><a href="#Web服务软件做了什么事儿" class="headerlink" title="Web服务软件做了什么事儿?"></a>Web服务软件做了什么事儿?</h2><ul>
-<li>负责建立底层的网络连接,负责将客户端请求的文件返回给客户端</li>
-<li>负责根据请求的路径找到对应的Servlet(负责扩展web服务软件功能的组件)</li>
-<li>web服务软件也称为web容器,用于装各种Servlet</li>
-</ul>
-<h1 id="如何使用Tomcat"><a href="#如何使用Tomcat" class="headerlink" title="如何使用Tomcat"></a>如何使用Tomcat</h1><ul>
-<li>以后开发web工程需要在Project Explorer视图下,如果没有从window-&gt;show view-&gt;other中搜索</li>
-<li>将Tomcat和Eclipse进行关联:</li>
-</ul>
-<ol>
-<li>下载Tomcat安装包和源代码   doc.tedu.cn</li>
-<li>将下载的两个压缩包放到d:java文件夹下(linux系统放到/home/java/) 解压在当前文件夹</li>
-<li>配置Eclipse:<br> eclipse-&gt;window-&gt;prefrences-&gt;server-&gt;runtime Enviroments-&gt;清空里面的内容-&gt;add-&gt;找到Tomcat 7.0-&gt;Browse找到java文件夹下apache-tomcat-7.0.96 完成即可!</li>
-<li>在servers窗口中点击超链接 添加Tomcat7.0  选中7.0直接ok即可</li>
-<li>添加完之后双击添加的Tomcat7.0 修改单选为中间的一个 保存关闭</li>
-<li>在Tomcat7.0上右键 Start 启动服务器</li>
-<li>地址栏中访问 localhost:8080<br> 如果能看见一只猫则说明成功!</li>
-</ol>
-<ul>
-<li>删除Tomcat</li>
-</ul>
-<ol>
-<li>在servers中 Tomcat 7.0 上右键 Delete</li>
-<li>eclipse-&gt;window-&gt;prefrences-&gt;server-&gt;runtime Enviroments-&gt;清空里面的内容</li>
-<li>把java文件夹中的apache-tomcat-7.0.96文件夹删除 重新解压一份</li>
-</ol>
-<h1 id="Serlet响应流程"><a href="#Serlet响应流程" class="headerlink" title="Serlet响应流程"></a>Serlet响应流程</h1><ol>
-<li>请求从客户端浏览器发出 </li>
-<li>请求被Tomcat拦截到, 得到请求的子路径去web.xml中找到对应的Servlet完整类名</li>
-<li>得到类名后通过反射技术将该Servlet实例化</li>
-<li>实例化后调用对象中的service方法</li>
-</ol>
-<h1 id="浏览器发出请求的方式"><a href="#浏览器发出请求的方式" class="headerlink" title="浏览器发出请求的方式"></a>浏览器发出请求的方式</h1><ol>
-<li>浏览器地址栏中写请求路径 回车后发出请求    get</li>
-<li>在页面中通过超链接发出请求     get</li>
-<li>在页面中通过表单发出请求    默认get     get/post<h3 id="请求方式"><a href="#请求方式" class="headerlink" title="请求方式"></a>请求方式</h3>get:请求参数在请求地址的后面<br>post:请求参数在请求体里面<h3 id="get请求参数中出现中文解决方案"><a href="#get请求参数中出现中文解决方案" class="headerlink" title="get请求参数中出现中文解决方案"></a>get请求参数中出现中文解决方案</h3>找到Servers工程中的server.xml文件 找到65行 添加以下内容<br> &lt;Connector URIEncoding=”UTF-8”<br>Tomcat版本8.0及以上版本不存在此问题</li>
-</ol>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -514,12 +496,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>ServletDay01</p>
+    <p><span class="copy-title">文章标题:</span>Java包装类</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="ZhYun1on9">ZhYun1on9</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-12-15, 08:52:23</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-15, 20:44:41</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/15/ServletDay01/" title="ServletDay01">http://yoursite.com/2019/12/15/ServletDay01/</a>
+    <p><span class="copy-title">发布时间:</span>2019-12-21, 11:52:54</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-21, 14:42:26</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/21/Java%E5%8C%85%E8%A3%85%E7%B1%BB/" title="Java包装类">http://yoursite.com/2019/12/21/Java%E5%8C%85%E8%A3%85%E7%B1%BB/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>ServletDay01 | ZhYun1on9</title>
-  <meta name="keywords" content=" Web , Servlet , Tomcat ">
-  <meta name="description" content="ServletDay01 | ZhYun1on9">
+  <title>Java语言基础 | ZhYun1on9</title>
+  <meta name="keywords" content=" Java , 变量 , 创建规范 ">
+  <meta name="description" content="Java语言基础 | ZhYun1on9">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Thymeleaf Thymeleaf是一个目前比较流行的框架之一,功能是将html页面作为一个模板,并根据页面中的特殊标记,对页面中的内容进行修改或替换.如何使用Thymeleaf   添加相关的jar包坐标 &lt;dependency&gt;      &lt;groupId&gt;org.thymeleaf&lt;&#x2F;groupId&gt;      &lt;artifactId&gt;th">
 <meta property="og:type" content="article">
@@ -383,9 +383,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-ServletDay01" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Java语言基础" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">ServletDay01</h1>
+        <h1 class="article-title">Java语言基础</h1>
     
     <div class="article-meta">
         
@@ -393,25 +393,25 @@
         
         <span class="book">
             
-                <a  data-rel="Servlet">Servlet</a>
+                <a  data-rel="Java">Java</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a class="color4">Web</a>
+            <a class="color5">Java</a>
             
-            <a class="color3">Servlet</a>
+            <a class="color3">变量</a>
             
-            <a class="color2">Tomcat</a>
+            <a class="color5">创建规范</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-15 20:44:41'>2019-12-15 08:52</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-22 21:19:18'>2019-12-22 10:44</time>
         
     </div>
     <div class="article-meta">
@@ -433,7 +433,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tomcat"><span class="toc-text">Tomcat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网络架构CS和BS"><span class="toc-text">网络架构CS和BS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是服务器"><span class="toc-text">什么是服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web服务软件做了什么事儿"><span class="toc-text">Web服务软件做了什么事儿?</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#如何使用Tomcat"><span class="toc-text">如何使用Tomcat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Serlet响应流程"><span class="toc-text">Serlet响应流程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#浏览器发出请求的方式"><span class="toc-text">浏览器发出请求的方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#请求方式"><span class="toc-text">请求方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#get请求参数中出现中文解决方案"><span class="toc-text">get请求参数中出现中文解决方案</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#标识符的使用"><span class="toc-text">标识符的使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#变量的使用"><span class="toc-text">变量的使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据类型"><span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#基本数据类型之间的运算规则"><span class="toc-text">基本数据类型之间的运算规则:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#算数运算符"><span class="toc-text">算数运算符</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#赋值运算符"><span class="toc-text">赋值运算符</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#比较运算符"><span class="toc-text">比较运算符</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#逻辑运算符"><span class="toc-text">逻辑运算符</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三目运算符"><span class="toc-text">三目运算符</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text"></span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -449,59 +449,323 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h1><ul>
-<li>安装Tomcat手册: <a href="http://doc.canglaoshi.org/" target="_blank" rel="noopener">Tomcat</a></li>
-</ul>
-<h1 id="网络架构CS和BS"><a href="#网络架构CS和BS" class="headerlink" title="网络架构CS和BS"></a>网络架构CS和BS</h1><ul>
-<li>CS: Client Server客户端服务器,客户端指:PC客户端 手机客户端<br>  优点: 执行效率略高,有丰富的展示效果 </li>
-<li>BS: Browser Server浏览器服务器<br>  优点: 节省设备内存,跨平台,版本更新便利</li>
-</ul>
-<h2 id="什么是服务器"><a href="#什么是服务器" class="headerlink" title="什么是服务器"></a>什么是服务器</h2><ul>
-<li>服务器就是一台高性能的电脑</li>
-<li>web服务器:在高性能电脑上安装了提供web服务的软件</li>
-<li>邮件服务器:在高性能电脑上安装了提供邮件收发服务的软件</li>
-<li>数据库服务器:在高性能电脑上安装了提供数据服务的软件(MySQL/Oracle..)</li>
-<li>ftp服务器:在高性能电脑上安装了提供文件上传下载服务的软件</li>
-<li>web服务软件也称为web容器,用于装各种Servle</li>
-</ul>
-<h2 id="Web服务软件做了什么事儿"><a href="#Web服务软件做了什么事儿" class="headerlink" title="Web服务软件做了什么事儿?"></a>Web服务软件做了什么事儿?</h2><ul>
-<li>负责建立底层的网络连接,负责将客户端请求的文件返回给客户端</li>
-<li>负责根据请求的路径找到对应的Servlet(负责扩展web服务软件功能的组件)</li>
-<li>web服务软件也称为web容器,用于装各种Servlet</li>
-</ul>
-<h1 id="如何使用Tomcat"><a href="#如何使用Tomcat" class="headerlink" title="如何使用Tomcat"></a>如何使用Tomcat</h1><ul>
-<li>以后开发web工程需要在Project Explorer视图下,如果没有从window-&gt;show view-&gt;other中搜索</li>
-<li>将Tomcat和Eclipse进行关联:</li>
+        <h1 id="标识符的使用"><a href="#标识符的使用" class="headerlink" title="标识符的使用"></a>标识符的使用</h1><ol>
+<li>标识符: 凡是自己可以起名字的地方都叫标识符<br>比如: 类名,变量名,方法名,接口名,包名….</li>
+<li>标识符的命名规则: 如果不遵守如下规则,编译不通过!<pre><code> 由26个英文字母大小写,0-9, _或$组成
+ 数字不可以开头
+ Java中严格区分大小写,长度无限制
+ 标识符不能包含空格.</code></pre></li>
+<li>Java中的名称命名规范:<pre><code> 1. 包名: 多单词组成时所有字母都小写: xxxyyyzzz
+ 2. 类名,接口名: 过单词组成时,所有单词的首字母大写: XxxYyyZzz
+ 3. 常量名: 所有字母都大写,多单词时每个单词用下划线连接: XXX_YYY_ZZZ</code></pre></li>
+<li>注意: 为了提高阅读性,要尽量有意义,要起到 见名之意</li>
+</ol>
+<h1 id="变量的使用"><a href="#变量的使用" class="headerlink" title="变量的使用"></a>变量的使用</h1><ol>
+<li>Java定义变量的格式<pre><code> 数据类型 变量名 = 变量值;</code></pre>说明: <ol>
+<li>变量必须先声明,后使用</li>
+<li>变量都定义在其作用域内.在作用域内,它是有效的.换句话说,出了作用域,就失效了.</li>
+<li>同一个作用域内,不可以声明两个同名的变量</li>
+</ol>
+</li>
+</ol>
+<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><ol>
+<li><p>基本数据类型:</p>
+<pre><code> 1. 整数类型: byte,short,int,long</code></pre><table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">占用存储空间</th>
+<th align="center">表数范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">byte</td>
+<td align="center">1字节=8bit位</td>
+<td align="center">-128~127</td>
+</tr>
+<tr>
+<td align="center">short</td>
+<td align="center">2字节</td>
+<td align="center">-2^15 ~2^15-1</td>
+</tr>
+<tr>
+<td align="center">int</td>
+<td align="center">4字节</td>
+<td align="center">-2^31~2^31-1</td>
+</tr>
+<tr>
+<td align="center">long</td>
+<td align="center">8字节</td>
+<td align="center">-2^63~2^63-1</td>
+</tr>
+</tbody></table>
+<pre><code> 2. 浮点类型: float,double
+ 3. 字符型: char
+ 4. 布尔型: boolean</code></pre></li>
+<li><p>引用数据类型:</p>
+<pre><code> 1. 类(class) String
+ 2. 接口(interface)
+ 3. 数组[]</code></pre></li>
+<li><p>注意 定义long类型和float类型时,变量值后面必须要加上L和F 否则编译不通过过</p>
+</li>
+<li><p>定义char变量时,通常使用一对’ ‘,内部只能写一个字符,否则编译不通过</p>
+<pre><code> char c = &#39;a&#39;</code></pre></li>
+<li><p>转义字符</p>
+<table>
+<thead>
+<tr>
+<th align="center">转义字符</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">\b</td>
+<td align="center">退格符</td>
+</tr>
+<tr>
+<td align="center">\n</td>
+<td align="center">换行符</td>
+</tr>
+<tr>
+<td align="center">\r</td>
+<td align="center">回车符</td>
+</tr>
+<tr>
+<td align="center">\t</td>
+<td align="center">制表符</td>
+</tr>
+<tr>
+<td align="center">&quot;</td>
+<td align="center">双引号</td>
+</tr>
+<tr>
+<td align="center">\</td>
+<td align="center">反斜线</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<h1 id="基本数据类型之间的运算规则"><a href="#基本数据类型之间的运算规则" class="headerlink" title="基本数据类型之间的运算规则:"></a>基本数据类型之间的运算规则:</h1><ul>
+<li>前提: 这里讨论只是七种基本数据类型变量的运算,不包含boolean类型的.</li>
 </ul>
 <ol>
-<li>下载Tomcat安装包和源代码   doc.tedu.cn</li>
-<li>将下载的两个压缩包放到d:java文件夹下(linux系统放到/home/java/) 解压在当前文件夹</li>
-<li>配置Eclipse:<br> eclipse-&gt;window-&gt;prefrences-&gt;server-&gt;runtime Enviroments-&gt;清空里面的内容-&gt;add-&gt;找到Tomcat 7.0-&gt;Browse找到java文件夹下apache-tomcat-7.0.96 完成即可!</li>
-<li>在servers窗口中点击超链接 添加Tomcat7.0  选中7.0直接ok即可</li>
-<li>添加完之后双击添加的Tomcat7.0 修改单选为中间的一个 保存关闭</li>
-<li>在Tomcat7.0上右键 Start 启动服务器</li>
-<li>地址栏中访问 localhost:8080<br> 如果能看见一只猫则说明成功!</li>
+<li>自动类型提升:<pre><code> 结论: 当容量小的数据类型的变量与容量大的数据类型的变量做运算时,结果自动提升为大容量的数据类型
+ byte,char,short -&gt; int -&gt; long -&gt; float -&gt; double
+ 特别的:当byte,char,short三种类型的变量做运算时,结果为int型</code></pre></li>
+<li>强制类型转换:<br>自动类型提升运算的逆运算.</li>
+<li>注意需要: (数据类型)变量名</li>
+<li>强转会丢失精度<pre><code> 说明: 此时的容量大小指的是,表示数的范围的大和小.比如: float容量要大于long容量</code></pre></li>
 </ol>
-<ul>
-<li>删除Tomcat</li>
+<h1 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h1><table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">运算</th>
+<th align="center">范例</th>
+<th align="center">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">+</td>
+<td align="center">正号</td>
+<td align="center">+3</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">负号</td>
+<td align="center">b=4;-b</td>
+<td align="center">-4</td>
+</tr>
+<tr>
+<td align="center">+</td>
+<td align="center">加</td>
+<td align="center">5+5</td>
+<td align="center">10</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">减</td>
+<td align="center">6-4</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td align="center">乘</td>
+<td align="center">3*4</td>
+<td align="center">12</td>
+</tr>
+<tr>
+<td align="center">/</td>
+<td align="center">除</td>
+<td align="center">5/5</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">%</td>
+<td align="center">取余</td>
+<td align="center">7%5</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">++</td>
+<td align="center">自增(前): 先运算后取值</td>
+<td align="center">a=2;b=++a;</td>
+<td align="center">a=3;b=3</td>
+</tr>
+<tr>
+<td align="center">++</td>
+<td align="center">自增(后): 先取值后运算</td>
+<td align="center">a=2;b=a++;</td>
+<td align="center">a=3;b=2</td>
+</tr>
+<tr>
+<td align="center">–</td>
+<td align="center">自减(前): 先运算后取值</td>
+<td align="center">a=2;b=–a;</td>
+<td align="center">a=1;b=1</td>
+</tr>
+<tr>
+<td align="center">–</td>
+<td align="center">自增(后): 先取值后运算</td>
+<td align="center">a=2;b=a–;</td>
+<td align="center">a=1;b=2;</td>
+</tr>
+</tbody></table>
+<h1 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h1><p>当“=”两侧数据类型不一致时，可以使用自动类型转换或使用强制 类型转换原则进行处理.<br>支持连续赋值</p>
+<pre><code>    +=.-=,*=,/=.%=</code></pre><h1 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h1><table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">运算</th>
+<th align="center">范例</th>
+<th align="center">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">==</td>
+<td align="center">相等</td>
+<td align="center">4==4</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">!=</td>
+<td align="center">不等于</td>
+<td align="center">4!=3</td>
+<td align="center">true</td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td align="center">小于</td>
+<td align="center">4&lt;3</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">&gt;</td>
+<td align="center">大于</td>
+<td align="center">4&gt;3</td>
+<td align="center">true</td>
+</tr>
+<tr>
+<td align="center">&lt;=</td>
+<td align="center">小于等于</td>
+<td align="center">4&lt;=3</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">&gt;=</td>
+<td align="center">大于等于</td>
+<td align="center">4&gt;=3</td>
+<td align="center">true</td>
+</tr>
+<tr>
+<td align="center">- 比较运算符的结果都是boolean型，也就是要么是true，要么是false</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 比较运算符“==”不能误写成“=”</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h1 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h1><ul>
+<li>&amp;–逻辑与    |–逻辑或    !–逻辑非</li>
+<li>&amp;&amp;–短路与    ||–短路或     ^–逻辑异或<table>
+<thead>
+<tr>
+<th align="center">a</th>
+<th align="center">b</th>
+<th align="center">a&amp;b</th>
+<th align="center">a&amp;&amp;b</th>
+<th align="center">a或b</th>
+<th align="center">a短路或b</th>
+<th align="center">!a</th>
+<th align="center">a^b</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">true</td>
+<td align="center">true</td>
+<td align="center">true</td>
+<td align="center">true</td>
+<td align="center">true</td>
+<td align="center">true</td>
+<td align="center">false</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">true</td>
+<td align="center">false</td>
+<td align="center">false</td>
+<td align="center">false</td>
+<td align="center">true</td>
+<td align="center">true</td>
+<td align="center">false</td>
+<td align="center">true</td>
+</tr>
+<tr>
+<td align="center">false</td>
+<td align="center">true</td>
+<td align="center">false</td>
+<td align="center">false</td>
+<td align="center">true</td>
+<td align="center">true</td>
+<td align="center">true</td>
+<td align="center">true</td>
+</tr>
+<tr>
+<td align="center">false</td>
+<td align="center">false</td>
+<td align="center">false</td>
+<td align="center">false</td>
+<td align="center">false</td>
+<td align="center">false</td>
+<td align="center">ture</td>
+<td align="center">false</td>
+</tr>
+</tbody></table>
+</li>
+<li>PS: 使用 &amp; 或者 | 时,条件里面要是有计算的话 不管是不是 true 或者 false 两边都得参与计算:<pre><code>  int x = 1;
+  int y = 1;
+  if(x++==2 &amp; ++y==2){
+      x = 7;
+  }
+  System.out.println(&quot;x:&quot;+x+&quot;,y:&quot;+y);
+  最后输出: x=2 y=2</code></pre></li>
 </ul>
-<ol>
-<li>在servers中 Tomcat 7.0 上右键 Delete</li>
-<li>eclipse-&gt;window-&gt;prefrences-&gt;server-&gt;runtime Enviroments-&gt;清空里面的内容</li>
-<li>把java文件夹中的apache-tomcat-7.0.96文件夹删除 重新解压一份</li>
+<h1 id="三目运算符"><a href="#三目运算符" class="headerlink" title="三目运算符"></a>三目运算符</h1><ol>
+<li>结构: (条件表达式) ? 表达式1 : 表达式2<pre><code> 说明:
+     1. 条件表达式的结果为boolean类型
+     2. 根据条件表达式真或假,决定执行表达式1,还是表达式2
+     如果表达式为true,则执行表达式1
+     如果表达式为false,则执行表达式2
+     3. 表达式1和表达式2要求是一致的 如果要有int double 则用double
+     4. 三目运算符可以嵌套使用</code></pre></li>
 </ol>
-<h1 id="Serlet响应流程"><a href="#Serlet响应流程" class="headerlink" title="Serlet响应流程"></a>Serlet响应流程</h1><ol>
-<li>请求从客户端浏览器发出 </li>
-<li>请求被Tomcat拦截到, 得到请求的子路径去web.xml中找到对应的Servlet完整类名</li>
-<li>得到类名后通过反射技术将该Servlet实例化</li>
-<li>实例化后调用对象中的service方法</li>
-</ol>
-<h1 id="浏览器发出请求的方式"><a href="#浏览器发出请求的方式" class="headerlink" title="浏览器发出请求的方式"></a>浏览器发出请求的方式</h1><ol>
-<li>浏览器地址栏中写请求路径 回车后发出请求    get</li>
-<li>在页面中通过超链接发出请求     get</li>
-<li>在页面中通过表单发出请求    默认get     get/post<h3 id="请求方式"><a href="#请求方式" class="headerlink" title="请求方式"></a>请求方式</h3>get:请求参数在请求地址的后面<br>post:请求参数在请求体里面<h3 id="get请求参数中出现中文解决方案"><a href="#get请求参数中出现中文解决方案" class="headerlink" title="get请求参数中出现中文解决方案"></a>get请求参数中出现中文解决方案</h3>找到Servers工程中的server.xml文件 找到65行 添加以下内容<br> &lt;Connector URIEncoding=”UTF-8”<br>Tomcat版本8.0及以上版本不存在此问题</li>
-</ol>
-
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
     </div>
@@ -514,12 +778,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>ServletDay01</p>
+    <p><span class="copy-title">文章标题:</span>Java语言基础</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="ZhYun1on9">ZhYun1on9</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-12-15, 08:52:23</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-15, 20:44:41</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/15/ServletDay01/" title="ServletDay01">http://yoursite.com/2019/12/15/ServletDay01/</a>
+    <p><span class="copy-title">发布时间:</span>2019-12-22, 10:44:07</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-22, 21:19:18</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/22/Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/" title="Java语言基础">http://yoursite.com/2019/12/22/Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
