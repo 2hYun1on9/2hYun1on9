@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>ServletDay01 | ZhYun1on9</title>
-  <meta name="keywords" content=" Web , Servlet , Tomcat ">
-  <meta name="description" content="ServletDay01 | ZhYun1on9">
+  <title>Java SpringDay01 | ZhYun1on9</title>
+  <meta name="keywords" content=" Java , 框架 , Spring ">
+  <meta name="description" content="Java SpringDay01 | ZhYun1on9">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="标识符的使用 标识符: 凡是自己可以起名字的地方都叫标识符比如: 类名,变量名,方法名,接口名,包名…. 标识符的命名规则: 如果不遵守如下规则,编译不通过! 由26个英文字母大小写,0-9, _或$组成  数字不可以开头  Java中严格区分大小写,长度无限制  标识符不能包含空格. Java中的名称命名规范: 1. 包名: 多单词组成时所有字母都小写: xxxyyyzzz  2. 类名,接口名">
 <meta property="og:type" content="article">
@@ -423,9 +423,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-ServletDay01" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-SpringDay01" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">ServletDay01</h1>
+        <h1 class="article-title">Java SpringDay01</h1>
     
     <div class="article-meta">
         
@@ -433,25 +433,25 @@
         
         <span class="book">
             
-                <a  data-rel="Servlet">Servlet</a>
+                <a  data-rel="框架">框架</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a class="color4">Web</a>
+            <a class="color5">Java</a>
             
-            <a class="color3">Servlet</a>
+            <a class="color3">框架</a>
             
-            <a class="color2">Tomcat</a>
+            <a class="color2">Spring</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-15 20:44:41'>2019-12-15 08:52</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-25 23:35:37'>2019-12-24 13:51</time>
         
     </div>
     <div class="article-meta">
@@ -473,7 +473,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tomcat"><span class="toc-text">Tomcat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网络架构CS和BS"><span class="toc-text">网络架构CS和BS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是服务器"><span class="toc-text">什么是服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web服务软件做了什么事儿"><span class="toc-text">Web服务软件做了什么事儿?</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#如何使用Tomcat"><span class="toc-text">如何使用Tomcat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Serlet响应流程"><span class="toc-text">Serlet响应流程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#浏览器发出请求的方式"><span class="toc-text">浏览器发出请求的方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#请求方式"><span class="toc-text">请求方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#get请求参数中出现中文解决方案"><span class="toc-text">get请求参数中出现中文解决方案</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Spring"><span class="toc-text">Spring</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring框架"><span class="toc-text">Spring框架</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#IOC控制反转"><span class="toc-text">IOC控制反转</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-Hello-World"><span class="toc-text">Spring Hello World</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-Bean"><span class="toc-text">Java Bean</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#例子"><span class="toc-text">例子:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Spring-IOC容器提供了丰富的Bean管理功能"><span class="toc-text">Spring IOC容器提供了丰富的Bean管理功能</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#单例"><span class="toc-text">单例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#例子-1"><span class="toc-text">例子:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多个实例模式"><span class="toc-text">多个实例模式</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -489,57 +489,134 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h1><ul>
-<li>安装Tomcat手册: <a href="http://doc.canglaoshi.org/" target="_blank" rel="noopener">Tomcat</a></li>
+        <h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h2 id="Spring框架"><a href="#Spring框架" class="headerlink" title="Spring框架"></a>Spring框架</h2><ol>
+<li>由一系列组件组成的框架,是软件的半成品,包含了软件常用的组件,可以作为软件的基石快速搭建开发软件</li>
+<li>其核心功能: IOC(控制反转) AOP(面向切面儿编程)</li>
+<li>使用Spring必须遵守Spring约定的规则</li>
+</ol>
+<h1 id="IOC控制反转"><a href="#IOC控制反转" class="headerlink" title="IOC控制反转"></a>IOC控制反转</h1><ol>
+<li><p>控制反转: 相对主动控制对象而言,将对象的控制交给容器管理的现象叫控制反转</p>
+</li>
+<li><p>Spring核心功能IOC: 可以帮助我们管理对象,使用者只需要从Spring得到对象,然后使用对象.</p>
+</li>
+<li><p>测试Spring IOC功能:</p>
+<pre><code> 1. 导入Spring
+ 2. 创建一个类
+ 3. 编写配置文件: 将类名告诉SPring
+ 4. 启动Spring,Spring会自动创建管理对象
+ 5. 通过Spring获得对象,测试对象</code></pre><h2 id="Spring-Hello-World"><a href="#Spring-Hello-World" class="headerlink" title="Spring Hello World"></a>Spring Hello World</h2></li>
+<li><p>创建Maven项目,导入Spring组件:</p>
+<pre><code> &lt;dependencies&gt;
+   &lt;dependency&gt;
+       &lt;groupId&gt;junit&lt;/groupId&gt;
+       &lt;artifactId&gt;junit&lt;/artifactId&gt;
+       &lt;version&gt;4.12&lt;/version&gt;
+   &lt;/dependency&gt;
+   &lt;dependency&gt;
+       &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+       &lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+       &lt;version&gt;4.3.25.RELEASE&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;/dependencies&gt;</code></pre></li>
+<li><p>创建被管理的类</p>
+<pre><code> public class DemoBean{
+     return &quot;Hello World&quot;;
+ }</code></pre></li>
+<li><p>编写配置文件</p>
+<pre><code> &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot; 
+ xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+ xmlns:context=&quot;http://www.springframework.org/schema/context&quot; 
+ xmlns:jdbc=&quot;http://www.springframework.org/schema/jdbc&quot;  
+ xmlns:jee=&quot;http://www.springframework.org/schema/jee&quot; 
+ xmlns:tx=&quot;http://www.springframework.org/schema/tx&quot;
+ xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot; 
+ xmlns:mvc=&quot;http://www.springframework.org/schema/mvc&quot;
+ xmlns:util=&quot;http://www.springframework.org/schema/util&quot;
+ xmlns:jpa=&quot;http://www.springframework.org/schema/data/jpa&quot;
+ xsi:schemaLocation=&quot;
+     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+     http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd
+     http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd
+     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+     http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd
+     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+     http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+     http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd&quot;&gt;
+
+ &lt;bean id=&quot;demo&quot; class=&quot;demo.DemoBean&quot;&gt;
+ &lt;/beans&gt;</code></pre></li>
+<li><p>编写测试类:</p>
+<pre><code>public class Test{
+ public static void main(String[] args){
+     // 创建Spring容器
+     ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);
+     // 从Spring容器中获取被管理的对象
+     DemoBean bean = (DemoBean)ctx.getBean(&quot;demo&quot;);
+     // 输出对象的时候,自动调用其toString()
+     System.out.println(bean);
+ }
+}</code></pre></li>
+</ol>
+<h1 id="Java-Bean"><a href="#Java-Bean" class="headerlink" title="Java Bean"></a>Java Bean</h1><ul>
+<li><p>Spring建议被管理的对象时JavaBean对象,Spring可宽泛的支持任何Java对象</p>
+</li>
+<li><p>Java Bean: 符合一定规范的Java对象</p>
+<pre><code>  1. 有Package
+  2. 有无参数构造器
+  3. 实现序列化接口
+  4. 可以使用gatXxx/setXxx定义&quot;Bean&quot;属性
+
+      &gt; 可以利用开发工具自动生成</code></pre></li>
+<li><p>Bean属性: 是指getXxx和setXxx, bean属性名xxx</p>
+</li>
+<li><p>对象属性: 是指对象的实例变量</p>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子:"></a>例子:</h3><pre><code>class Person{
+  String name; //实例变量,对象属性
+  String getName(){ // Bean属性,属性名 name
+      return name;
+  }
+}</code></pre></li>
 </ul>
-<h1 id="网络架构CS和BS"><a href="#网络架构CS和BS" class="headerlink" title="网络架构CS和BS"></a>网络架构CS和BS</h1><ul>
-<li>CS: Client Server客户端服务器,客户端指:PC客户端 手机客户端<br>  优点: 执行效率略高,有丰富的展示效果 </li>
-<li>BS: Browser Server浏览器服务器<br>  优点: 节省设备内存,跨平台,版本更新便利</li>
-</ul>
-<h2 id="什么是服务器"><a href="#什么是服务器" class="headerlink" title="什么是服务器"></a>什么是服务器</h2><ul>
-<li>服务器就是一台高性能的电脑</li>
-<li>web服务器:在高性能电脑上安装了提供web服务的软件</li>
-<li>邮件服务器:在高性能电脑上安装了提供邮件收发服务的软件</li>
-<li>数据库服务器:在高性能电脑上安装了提供数据服务的软件(MySQL/Oracle..)</li>
-<li>ftp服务器:在高性能电脑上安装了提供文件上传下载服务的软件</li>
-<li>web服务软件也称为web容器,用于装各种Servle</li>
-</ul>
-<h2 id="Web服务软件做了什么事儿"><a href="#Web服务软件做了什么事儿" class="headerlink" title="Web服务软件做了什么事儿?"></a>Web服务软件做了什么事儿?</h2><ul>
-<li>负责建立底层的网络连接,负责将客户端请求的文件返回给客户端</li>
-<li>负责根据请求的路径找到对应的Servlet(负责扩展web服务软件功能的组件)</li>
-<li>web服务软件也称为web容器,用于装各种Servlet</li>
-</ul>
-<h1 id="如何使用Tomcat"><a href="#如何使用Tomcat" class="headerlink" title="如何使用Tomcat"></a>如何使用Tomcat</h1><ul>
-<li>以后开发web工程需要在Project Explorer视图下,如果没有从window-&gt;show view-&gt;other中搜索</li>
-<li>将Tomcat和Eclipse进行关联:</li>
+<h1 id="Spring-IOC容器提供了丰富的Bean管理功能"><a href="#Spring-IOC容器提供了丰富的Bean管理功能" class="headerlink" title="Spring IOC容器提供了丰富的Bean管理功能"></a>Spring IOC容器提供了丰富的Bean管理功能</h1><ul>
+<li>Spring为了支持任何软件,提供丰富的Bean对象管理功能</li>
+<li><h2 id="单例"><a href="#单例" class="headerlink" title="单例"></a>单例</h2></li>
+<li>单例: 软件运行期间只有唯一不变的一个实例</li>
+<li>Spring默认情况下按照单例规则管理对象<h2 id="例子-1"><a href="#例子-1" class="headerlink" title="例子:"></a>例子:</h2><pre><code>public class TestCase{
+  ClassPathXmlApplicationContext ctx;
+  @Before //在...之前,在测试案例之前
+  public void init(){
+      System.out.println(&quot;init&quot;);
+      ctx = new ClassPathXmlApplication(&quot;applicationContext.xml&quot;);
+  }
+  @Test
+  public void testDemoBean(){
+      DemoBean bean = (DemoBean)ctx.getBean(&quot;demo&quot;);
+      System.out.println(bean);
+  }
+  @Test
+  public void testSingleton(){
+      DemoBean bean1 = (DemoBean)ctx.getBean(&quot;demo&quot;);
+      DemoBean bean2 = (DemoBean)ctx.getBean(&quot;demo&quot;);
+      System.out.println(bean1==bean2);
+  }
+  @After //在...之后,在测试案例之后
+  public void destroy(){
+      System.out.println(&quot;destroy&quot;);
+      ctx.close();
+  }
+}</code></pre><h2 id="多个实例模式"><a href="#多个实例模式" class="headerlink" title="多个实例模式"></a>多个实例模式</h2></li>
 </ul>
 <ol>
-<li>下载Tomcat安装包和源代码   doc.tedu.cn</li>
-<li>将下载的两个压缩包放到d:java文件夹下(linux系统放到/home/java/) 解压在当前文件夹</li>
-<li>配置Eclipse:<br> eclipse-&gt;window-&gt;prefrences-&gt;server-&gt;runtime Enviroments-&gt;清空里面的内容-&gt;add-&gt;找到Tomcat 7.0-&gt;Browse找到java文件夹下apache-tomcat-7.0.96 完成即可!</li>
-<li>在servers窗口中点击超链接 添加Tomcat7.0  选中7.0直接ok即可</li>
-<li>添加完之后双击添加的Tomcat7.0 修改单选为中间的一个 保存关闭</li>
-<li>在Tomcat7.0上右键 Start 启动服务器</li>
-<li>地址栏中访问 localhost:8080<br> 如果能看见一只猫则说明成功!</li>
-</ol>
-<ul>
-<li>删除Tomcat</li>
-</ul>
-<ol>
-<li>在servers中 Tomcat 7.0 上右键 Delete</li>
-<li>eclipse-&gt;window-&gt;prefrences-&gt;server-&gt;runtime Enviroments-&gt;清空里面的内容</li>
-<li>把java文件夹中的apache-tomcat-7.0.96文件夹删除 重新解压一份</li>
-</ol>
-<h1 id="Serlet响应流程"><a href="#Serlet响应流程" class="headerlink" title="Serlet响应流程"></a>Serlet响应流程</h1><ol>
-<li>请求从客户端浏览器发出 </li>
-<li>请求被Tomcat拦截到, 得到请求的子路径去web.xml中找到对应的Servlet完整类名</li>
-<li>得到类名后通过反射技术将该Servlet实例化</li>
-<li>实例化后调用对象中的service方法</li>
-</ol>
-<h1 id="浏览器发出请求的方式"><a href="#浏览器发出请求的方式" class="headerlink" title="浏览器发出请求的方式"></a>浏览器发出请求的方式</h1><ol>
-<li>浏览器地址栏中写请求路径 回车后发出请求    get</li>
-<li>在页面中通过超链接发出请求     get</li>
-<li>在页面中通过表单发出请求    默认get     get/post<h3 id="请求方式"><a href="#请求方式" class="headerlink" title="请求方式"></a>请求方式</h3>get:请求参数在请求地址的后面<br>post:请求参数在请求体里面<h3 id="get请求参数中出现中文解决方案"><a href="#get请求参数中出现中文解决方案" class="headerlink" title="get请求参数中出现中文解决方案"></a>get请求参数中出现中文解决方案</h3>找到Servers工程中的server.xml文件 找到65行 添加以下内容<br> &lt;Connector URIEncoding=”UTF-8”<br>Tomcat版本8.0及以上版本不存在此问题</li>
+<li>编写配置文件:<pre><code> &lt;!-- 设置了属性 scope=&quot;prototype&quot; 以后就是多个实例,每次使用对象时候都会创建一个新的实例 --&gt;
+ &lt;bean id=&quot;demo2&quot; scope=&quot;prototype&quot; class=&quot;demo.DemoBean&quot;&gt;&lt;/bean&gt;</code></pre>例子:<pre><code>@Test
+public void testPrototype(){
+ //多例测试
+ DemoBean bean1 = (DemoBean)ctx.getBean(&quot;demo2&quot;);
+ DemoBean bean2 = (DemoBean)ctx.getBean(&quot;demo2&quot;);
+ System.out.println(bean1==bean2);
+}</code></pre></li>
 </ol>
 
       
@@ -554,12 +631,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>ServletDay01</p>
+    <p><span class="copy-title">文章标题:</span>Java SpringDay01</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="ZhYun1on9">ZhYun1on9</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-12-15, 08:52:23</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-15, 20:44:41</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/15/ServletDay01/" title="ServletDay01">http://yoursite.com/2019/12/15/ServletDay01/</a>
+    <p><span class="copy-title">发布时间:</span>2019-12-24, 13:51:32</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-25, 23:35:37</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/24/SpringDay01/" title="Java SpringDay01">http://yoursite.com/2019/12/24/SpringDay01/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
