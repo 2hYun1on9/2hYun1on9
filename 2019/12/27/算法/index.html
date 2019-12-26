@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Java包装类 | ZhYun1on9</title>
-  <meta name="keywords" content=" Java , 包装类 , 常用方法 ">
-  <meta name="description" content="Java包装类 | ZhYun1on9">
+  <title>排序算法 | ZhYun1on9</title>
+  <meta name="keywords" content=" 排序 , 算法 ">
+  <meta name="description" content="排序算法 | ZhYun1on9">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Spring IOC对象生命周期管理方法 可以在对象的创建以后自动执行其初始化方法,用于初始化资源 可以在对象销毁之前自动执行其销毁方法,用于回收资源 注意: 单例的时候Spring容器或调用销毁方法,但是多个实例时候,Spring不会管理销毁方法.也就是设置 Scope&#x3D;”prototype” 则 destroy-method&#x3D;”close” 失效利用Spring调用对象的生命周期管理方法">
 <meta property="og:type" content="article">
@@ -499,9 +499,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-Java包装类" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-算法" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Java包装类</h1>
+        <h1 class="article-title">排序算法</h1>
     
     <div class="article-meta">
         
@@ -509,25 +509,23 @@
         
         <span class="book">
             
-                <a  data-rel="Java">Java</a>
+                <a  data-rel="算法">算法</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a class="color5">Java</a>
+            <a class="color3">排序</a>
             
-            <a class="color4">包装类</a>
-            
-            <a class="color5">常用方法</a>
+            <a class="color3">算法</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-21 14:42:26'>2019-12-21 11:52</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-27 00:45:13'>2019-12-27 00:27</time>
         
     </div>
     <div class="article-meta">
@@ -549,7 +547,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#包装类"><span class="toc-text">包装类</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#十大内部排序算法"><span class="toc-text">十大内部排序算法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#算法的五大特征"><span class="toc-text">算法的五大特征</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -565,40 +563,30 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h1><ul>
-<li>包装类是为了解决基本类型不能直接参与面向对象,开发问题而产生的,使得基本类型可以以对象的形式存在</li>
-<li>自动装箱特性:<pre><code>  int a = 1;
-  // 这里编译器在编译时会将代码改成
-  // Integer i = Integer.valueOf(a);
-  Integer i =a;</code></pre></li>
-<li>自动拆箱特性:<pre><code>  // 代码触发了自动拆箱特性.
-  // a = i.intValue();
-  a = i;</code></pre><table>
-<thead>
-<tr>
-<th align="center">返回值</th>
-<th align="center">方法和说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">int</td>
-<td align="center">intValue();将包装类转换成基本类型</td>
-</tr>
-<tr>
-<td align="center">int</td>
-<td align="center">parseInt(String s); 将字符串解析成int类型(前提必须是字符串内容必须是相同类型 否则会抛出异常)</td>
-</tr>
-<tr>
-<td align="center">double</td>
-<td align="center">parseDouble(String s);</td>
-</tr>
-<tr>
-<td align="center">Object</td>
-<td align="center">valueOf(Object o); 将基本类型转换成包装类</td>
-</tr>
-</tbody></table>
+        <h1 id="十大内部排序算法"><a href="#十大内部排序算法" class="headerlink" title="十大内部排序算法"></a>十大内部排序算法</h1><ul>
+<li><p>选择排序</p>
+<blockquote>
+<p><code>直接排序,堆排序</code></p>
+</blockquote>
+</li>
+<li><p>交换排序</p>
+<blockquote>
+<p><code>冒泡排序.快速排序</code></p>
+</blockquote>
+</li>
+<li><p>插入排序</p>
+<blockquote>
+<p><code>直接插入排序,折半插入排序</code></p>
+</blockquote>
+</li>
+<li><p>归并排序</p>
+</li>
+<li><p>桶式排序</p>
+</li>
+<li><p>基数排序</p>
 </li>
 </ul>
+<h1 id="算法的五大特征"><a href="#算法的五大特征" class="headerlink" title="算法的五大特征"></a>算法的五大特征</h1><p>|:—:|:—:|<br>|输入(input)|有0个或多个输入数据,这些必须有清楚的描述和定义|<br>|输出(Output)|至少有1个或多个输出结果,不可以没有输出结果|<br>|有穷性(有限性,Finiteness)|算法在有限的步骤之后会自动结束而不会无限循环,并且每一个步骤可以在可接受的时间内完成|<br>|确定性(明确性),Definiteness|算法中的每一步都有确定的含义,不会出现二义性|<br>|可行性(有效性,Effectiveness)|算法的每一步都是清楚且可行的,能让用户用纸笔计算而求出答案|</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -612,12 +600,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Java包装类</p>
+    <p><span class="copy-title">文章标题:</span>排序算法</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="ZhYun1on9">ZhYun1on9</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-12-21, 11:52:54</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-21, 14:42:26</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/21/Java%E5%8C%85%E8%A3%85%E7%B1%BB/" title="Java包装类">http://yoursite.com/2019/12/21/Java%E5%8C%85%E8%A3%85%E7%B1%BB/</a>
+    <p><span class="copy-title">发布时间:</span>2019-12-27, 00:27:30</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-27, 00:45:13</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/27/%E7%AE%97%E6%B3%95/" title="排序算法">http://yoursite.com/2019/12/27/%E7%AE%97%E6%B3%95/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

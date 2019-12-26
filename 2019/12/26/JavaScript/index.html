@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Java包装类 | ZhYun1on9</title>
-  <meta name="keywords" content=" Java , 包装类 , 常用方法 ">
-  <meta name="description" content="Java包装类 | ZhYun1on9">
+  <title>JavaScript | ZhYun1on9</title>
+  <meta name="keywords" content=" 前端 , JavaScript ">
+  <meta name="description" content="JavaScript | ZhYun1on9">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Spring IOC对象生命周期管理方法 可以在对象的创建以后自动执行其初始化方法,用于初始化资源 可以在对象销毁之前自动执行其销毁方法,用于回收资源 注意: 单例的时候Spring容器或调用销毁方法,但是多个实例时候,Spring不会管理销毁方法.也就是设置 Scope&#x3D;”prototype” 则 destroy-method&#x3D;”close” 失效利用Spring调用对象的生命周期管理方法">
 <meta property="og:type" content="article">
@@ -499,9 +499,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-Java包装类" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-JavaScript" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Java包装类</h1>
+        <h1 class="article-title">JavaScript</h1>
     
     <div class="article-meta">
         
@@ -509,25 +509,23 @@
         
         <span class="book">
             
-                <a  data-rel="Java">Java</a>
+                <a  data-rel="JavaScript">JavaScript</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a class="color5">Java</a>
+            <a class="color3">前端</a>
             
-            <a class="color4">包装类</a>
-            
-            <a class="color5">常用方法</a>
+            <a class="color1">JavaScript</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-21 14:42:26'>2019-12-21 11:52</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-26 20:31:23'>2019-12-26 19:05</time>
         
     </div>
     <div class="article-meta">
@@ -549,7 +547,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#包装类"><span class="toc-text">包装类</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#语言特点"><span class="toc-text">语言特点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#如何在html页面中引入JavaScript语言"><span class="toc-text">如何在html页面中引入JavaScript语言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript语法"><span class="toc-text">JavaScript语法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据类型"><span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#变量的声明和赋值"><span class="toc-text">变量的声明和赋值</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#运算符-gt-lt-gt-lt"><span class="toc-text">运算符 + - * &#x2F; % &gt; &lt; &gt;&#x3D; &lt;&#x3D; &#x3D; &#x3D;&#x3D; !&#x3D;</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#语句if-else-for-while-switch-case"><span class="toc-text">语句if else for while switch case</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#方法声明"><span class="toc-text">方法声明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#和页面相关的方法"><span class="toc-text">和页面相关的方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript对象分类"><span class="toc-text">JavaScript对象分类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BOM浏览器相关对象"><span class="toc-text">BOM浏览器相关对象</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -565,38 +563,99 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h1><ul>
-<li>包装类是为了解决基本类型不能直接参与面向对象,开发问题而产生的,使得基本类型可以以对象的形式存在</li>
-<li>自动装箱特性:<pre><code>  int a = 1;
-  // 这里编译器在编译时会将代码改成
-  // Integer i = Integer.valueOf(a);
-  Integer i =a;</code></pre></li>
-<li>自动拆箱特性:<pre><code>  // 代码触发了自动拆箱特性.
-  // a = i.intValue();
-  a = i;</code></pre><table>
-<thead>
-<tr>
-<th align="center">返回值</th>
-<th align="center">方法和说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">int</td>
-<td align="center">intValue();将包装类转换成基本类型</td>
-</tr>
-<tr>
-<td align="center">int</td>
-<td align="center">parseInt(String s); 将字符串解析成int类型(前提必须是字符串内容必须是相同类型 否则会抛出异常)</td>
-</tr>
-<tr>
-<td align="center">double</td>
-<td align="center">parseDouble(String s);</td>
-</tr>
-<tr>
-<td align="center">Object</td>
-<td align="center">valueOf(Object o); 将基本类型转换成包装类</td>
-</tr>
-</tbody></table>
+        <h1 id="语言特点"><a href="#语言特点" class="headerlink" title="语言特点"></a>语言特点</h1><ol>
+<li>属于脚本语言,不需要编译由浏览器解析执行</li>
+<li>属于弱类型语言</li>
+<li>基于面向对象</li>
+<li>安全性高: js语言只能访问浏览器内部数据,不能访问浏览器以外的数据</li>
+<li>交互性搞: js语言可以直接嵌入到html种,可以直接在页面中和用户进行交互</li>
+</ol>
+<h1 id="如何在html页面中引入JavaScript语言"><a href="#如何在html页面中引入JavaScript语言" class="headerlink" title="如何在html页面中引入JavaScript语言"></a>如何在html页面中引入JavaScript语言</h1><ul>
+<li>内联: <code>在标签的事件属性中添加js代码,当事件触发时执行</code><pre><code class="html">&lt;input type=&quot;button&quot; value=&quot;内联按钮&quot; onclick=&quot;alert(&#39;内联js代码触发!!&#39;)&quot;&gt;</code></pre>
+</li>
+<li>内部: <code>在html页面的任意位置添加script标签,标签体内写js代码,当加载页面时执行</code><pre><code class="html">&lt;script type=&quot;text/javascript&quot;&gt;
+  alter(&quot;内部js代码触发!&quot;);
+&lt;/script&gt;</code></pre>
+</li>
+<li>外部: <code>在单独的js文件中写js代码,在html页面中通过script标签的src属性引入</code><pre><code class="html">&lt;script type=&quot;text/javascript&quot; src=&quot;first.js&quot;&gt;</code></pre>
+</li>
+</ul>
+<h1 id="JavaScript语法"><a href="#JavaScript语法" class="headerlink" title="JavaScript语法"></a>JavaScript语法</h1><ul>
+<li><code>数据类型 变量 运算符 语句 方法 面向对象</code><h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1></li>
+<li>JS语言中只有对象类型</li>
+<li>常见的对象类型:<ol>
+<li><code>数值: number 相当于Java中所有数值类型总和</code></li>
+<li><code>字符串: string JS中使用单引号或者双引号修饰字符串</code></li>
+<li><code>布尔值: boolean true/false</code></li>
+<li><code>未定义: undefined 当变量只声明不赋值时为未定义类型</code></li>
+<li><code>自定义: object Person/Student/Hero</code></li>
+</ol>
+</li>
+</ul>
+<h1 id="变量的声明和赋值"><a href="#变量的声明和赋值" class="headerlink" title="变量的声明和赋值"></a>变量的声明和赋值</h1><ul>
+<li><code>JS语言属于弱类型的语言</code></li>
+<li><code>Java: int x=10; String s=&quot;小明&quot; Person P=new Person();</code></li>
+<li><code>JS: var x=10; var s=&quot;小梦&quot; var b=true; var p=new Person();</code></li>
+<li>var和let的区别:<code>var声明的是全局变量,let声明的局部变量</code></li>
+</ul>
+<h1 id="运算符-gt-lt-gt-lt"><a href="#运算符-gt-lt-gt-lt" class="headerlink" title="运算符 + - * / % &gt; &lt; &gt;= &lt;= = == !="></a>运算符 + - * / % &gt; &lt; &gt;= &lt;= = == !=</h1><ul>
+<li>== 和 ===: <code>==先统一类型再比较值是否相等,===先比较类型如果类型统一再比较值:&quot;66&quot;===666</code></li>
+<li>触发运算:<code>JS中会根据结果自动转换整数和小数</code></li>
+<li><code>typeof会返回数据类型</code></li>
+</ul>
+<h1 id="语句if-else-for-while-switch-case"><a href="#语句if-else-for-while-switch-case" class="headerlink" title="语句if else for while switch case"></a>语句if else for while switch case</h1><ul>
+<li>用法和Java大体相同</li>
+<li>for循环中的int i改成var i</li>
+</ul>
+<h1 id="方法声明"><a href="#方法声明" class="headerlink" title="方法声明"></a>方法声明</h1><ul>
+<li>Java: <code>public void 方法名(参数列表){方法体}</code></li>
+<li>JS: <code>function 方法名(参数列表){方法体}</code></li>
+<li>常见的四种方法:<ol>
+<li>无参无返回值<pre><code class="js">function fn1(){
+ alert(&quot;fn1执行了&quot;);
+}</code></pre>
+</li>
+<li>无参有返回值<pre><code class="js">functiion fn2(){
+ return &quot;abc&quot;;
+}</code></pre>
+</li>
+<li>有参无返回值<pre><code class="js">function fn3(name,age){
+ alert(name+&quot;:&quot;:age);
+}</code></pre>
+</li>
+<li>有参有返回值<pre><code class="js">function fn4(name,age){
+ alter(name+&quot;:&quot;+age);
+ return &quot;123&quot;;
+}</code></pre>
+</li>
+</ol>
+</li>
+<li>三种声明方法的方式:<ol>
+<li>function 方法名(参数列表){方法体}</li>
+<li>var 方法名=function(参数列表){方法体}</li>
+<li>var 方法名=new Function(“参数1”,”参数2”,”方法体”);</li>
+</ol>
+</li>
+</ul>
+<h1 id="和页面相关的方法"><a href="#和页面相关的方法" class="headerlink" title="和页面相关的方法"></a>和页面相关的方法</h1><ol>
+<li>通过id获取页面中的元素<blockquote>
+<p>abc<br>var d = document.getElementById(“d1”);</p>
+</blockquote>
+</li>
+<li>获取和修改元素的文本内容 d.innerText=”啦啦啦”;// 修改 d.innerText 获取</li>
+<li>获取和修改文本框的值 i1.value=”xxx”;//修改 i1.value;//获取</li>
+<li>获取和修改元素的html内容 i1.innerHTML=””;</li>
+</ol>
+<h1 id="JavaScript对象分类"><a href="#JavaScript对象分类" class="headerlink" title="JavaScript对象分类"></a>JavaScript对象分类</h1><ol>
+<li>内置对象: number,string,boolean等</li>
+<li>浏览器相关对象BOM: Browser Object Model(浏览器对象模型)</li>
+<li>页面相关对象DOM: Document Object Model(文档对象模型)</li>
+</ol>
+<h1 id="BOM浏览器相关对象"><a href="#BOM浏览器相关对象" class="headerlink" title="BOM浏览器相关对象"></a>BOM浏览器相关对象</h1><ul>
+<li>window对象,window的属性称为全局属性,方法称为全局方法,访问时可以省略掉window</li>
+<li>window里面常见属性<ol>
+<li><code>location 位置 window.location.hef</code> 获取和修改浏览器的版本信息</li>
+</ol>
 </li>
 </ul>
 
@@ -612,12 +671,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Java包装类</p>
+    <p><span class="copy-title">文章标题:</span>JavaScript</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="ZhYun1on9">ZhYun1on9</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-12-21, 11:52:54</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-21, 14:42:26</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/21/Java%E5%8C%85%E8%A3%85%E7%B1%BB/" title="Java包装类">http://yoursite.com/2019/12/21/Java%E5%8C%85%E8%A3%85%E7%B1%BB/</a>
+    <p><span class="copy-title">发布时间:</span>2019-12-26, 19:05:40</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-26, 20:31:23</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/26/JavaScript/" title="JavaScript">http://yoursite.com/2019/12/26/JavaScript/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

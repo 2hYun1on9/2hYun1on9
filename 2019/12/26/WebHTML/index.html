@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Java包装类 | ZhYun1on9</title>
-  <meta name="keywords" content=" Java , 包装类 , 常用方法 ">
-  <meta name="description" content="Java包装类 | ZhYun1on9">
+  <title>Web Html | ZhYun1on9</title>
+  <meta name="keywords" content=" HTML , 前端 ">
+  <meta name="description" content="Web Html | ZhYun1on9">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Spring IOC对象生命周期管理方法 可以在对象的创建以后自动执行其初始化方法,用于初始化资源 可以在对象销毁之前自动执行其销毁方法,用于回收资源 注意: 单例的时候Spring容器或调用销毁方法,但是多个实例时候,Spring不会管理销毁方法.也就是设置 Scope&#x3D;”prototype” 则 destroy-method&#x3D;”close” 失效利用Spring调用对象的生命周期管理方法">
 <meta property="og:type" content="article">
@@ -499,9 +499,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-Java包装类" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-WebHTML" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Java包装类</h1>
+        <h1 class="article-title">Web Html</h1>
     
     <div class="article-meta">
         
@@ -509,25 +509,23 @@
         
         <span class="book">
             
-                <a  data-rel="Java">Java</a>
+                <a  data-rel="Web前端">Web前端</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a class="color5">Java</a>
+            <a class="color5">HTML</a>
             
-            <a class="color4">包装类</a>
-            
-            <a class="color5">常用方法</a>
+            <a class="color3">前端</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-21 14:42:26'>2019-12-21 11:52</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-26 17:02:14'>2019-12-26 11:38</time>
         
     </div>
     <div class="article-meta">
@@ -549,7 +547,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#包装类"><span class="toc-text">包装类</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML"><span class="toc-text">HTML</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#常见的文本标签"><span class="toc-text">常见的文本标签</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#列表标签"><span class="toc-text">列表标签</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#图片标签-img"><span class="toc-text">图片标签 img</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#超链接-a"><span class="toc-text">超链接 a</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#表格标签-table"><span class="toc-text">表格标签 table</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#表单form"><span class="toc-text">表单form</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS的三种引入方式"><span class="toc-text">CSS的三种引入方式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#选择器"><span class="toc-text">选择器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#常用样式"><span class="toc-text">常用样式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文本和字体相关样式"><span class="toc-text">文本和字体相关样式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS的三大特性"><span class="toc-text">CSS的三大特性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#position定位方式-4-1种"><span class="toc-text">position定位方式: 4+1种</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#溢出设置"><span class="toc-text">溢出设置</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -565,40 +563,223 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h1><ul>
-<li>包装类是为了解决基本类型不能直接参与面向对象,开发问题而产生的,使得基本类型可以以对象的形式存在</li>
-<li>自动装箱特性:<pre><code>  int a = 1;
-  // 这里编译器在编译时会将代码改成
-  // Integer i = Integer.valueOf(a);
-  Integer i =a;</code></pre></li>
-<li>自动拆箱特性:<pre><code>  // 代码触发了自动拆箱特性.
-  // a = i.intValue();
-  a = i;</code></pre><table>
-<thead>
-<tr>
-<th align="center">返回值</th>
-<th align="center">方法和说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">int</td>
-<td align="center">intValue();将包装类转换成基本类型</td>
-</tr>
-<tr>
-<td align="center">int</td>
-<td align="center">parseInt(String s); 将字符串解析成int类型(前提必须是字符串内容必须是相同类型 否则会抛出异常)</td>
-</tr>
-<tr>
-<td align="center">double</td>
-<td align="center">parseDouble(String s);</td>
-</tr>
-<tr>
-<td align="center">Object</td>
-<td align="center">valueOf(Object o); 将基本类型转换成包装类</td>
-</tr>
-</tbody></table>
+        <h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><blockquote>
+<p><code>Hhyper Text Markup Language</code>超文本标记语言,不仅仅是纯文本(还包括字体相关和多媒体(图片,音频,视频))</p>
+</blockquote>
+<pre><code class="html">&lt;! DOCTYPE html&gt; 文档声明,告诉浏览器使用html5的标准解析页面
+&lt;html&gt; 根标签
+    &lt;head&gt; 头标签,给浏览器的看内容写在头标签里面
+        &lt;meta charset=&quot;utf-8&quot;&gt; 告诉浏览器字符集是utf-8
+        &lt;title&gt;Insert title here&lt;/title&gt; 页面标题
+    &lt;/head&gt;
+    &lt;body&gt; 体标签,给用户看的内容写在body里面
+
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<blockquote>
+<p>学习HTML主要学习的就是有哪些标签,标签有哪些属性以及标签和标签之间的嵌套关系</p>
+</blockquote>
+<h1 id="常见的文本标签"><a href="#常见的文本标签" class="headerlink" title="常见的文本标签"></a>常见的文本标签</h1><ol>
+<li>内容标题 <code>&lt;h1&gt;-&lt;h6&gt;</code> 独占一行,字体加粗,自带上下间距</li>
+<li>段落标签 <code>&lt;p&gt;</code> 独占一行,自带上下间距</li>
+<li>换行标签 <code>&lt;br&gt;</code> 在html页面中会回车不能换行,只能识别一个空格</li>
+<li>水平分割先 <code>&lt;hr&gt;</code></li>
+<li>加粗 <code>&lt;b&gt;</code></li>
+<li>斜体 <code>&lt;i&gt;</code></li>
+<li>小字 <code>&lt;small&gt;</code></li>
+</ol>
+<h1 id="列表标签"><a href="#列表标签" class="headerlink" title="列表标签"></a>列表标签</h1><ol>
+<li>无序列表: ul:type(显示图片) li<pre><code class="html">&lt;ul type=&quot;square&quot;&gt; &lt;!--unordered list 无序列表--&gt;
+ &lt;li&gt;刘备&lt;/li&gt; &lt;!-- list item列表项 --&gt;
+ &lt;li&gt;关羽&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</li>
+<li>有序列表: ol:type=(序号类型) start=(起始值) reversed=(降序) li<pre><code class="html">&lt;ol type=&quot;1&quot; start=&quot;10&quot; reversed=&quot;reversed&quot;&gt; &lt;!-- ordered list有序列表--&gt;
+ &lt;li&gt;吃饭&lt;/li&gt;
+ &lt;li&gt;睡觉&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+</li>
+<li>定义列表 dl dt dd<pre><code class="html">&lt;dl&gt; &lt;!--定义一个列表--&gt;
+ &lt;dt&gt;凉菜&lt;/dt&gt; &lt;!-- 定义一个标题 --&gt;
+ &lt;dd&gt;拍黄瓜&lt;/dd&gt; &lt;!--定义描述 --&gt;
+ &lt;dt&gt;热菜&lt;/dt&gt; &lt;!-- 定义一个标题 --&gt;
+ &lt;dd&gt;乱炖&lt;/dd&gt; &lt;!-- 定义描述 --&gt;
+ &lt;dd&gt;热的&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+</li>
+<li>列表嵌套: 有序和无序可以任意嵌套<pre><code class="html">&lt;ul&gt;
+ &lt;li&gt;凉菜
+     &lt;ol&gt;
+         &lt;li&gt;东北大拉皮&lt;/li&gt;
+         &lt;li&gt;果仁菠菜&lt;/li&gt;
+     &lt;/ol&gt;
+ &lt;/li&gt;
+ &lt;li&gt;热菜
+     &lt;ol&gt;
+         &lt;li&gt;番茄炒蛋
+             &lt;ul&gt;
+                 &lt;li&gt;甜口味&lt;/li&gt;
+                 &lt;li&gt;咸口味&lt;/li&gt;
+             &lt;/ul&gt;
+         &lt;/li&gt;
+         &lt;li&gt;锅包肉&lt;/li&gt;
+     &lt;/ol&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</li>
+</ol>
+<h1 id="图片标签-img"><a href="#图片标签-img" class="headerlink" title="图片标签 img"></a>图片标签 img</h1><ul>
+<li>src: 路径 <code>相对路径: 访问站内资源 图片和页面同一目录:直接图片名 图片在上级目录: ../图片名 图片在下级目录: 文件夹名/图片名    绝对路径: 访问站外资源,图片盗链,节省本站资源,有找不到图片的风险</code></li>
+<li>alt: 图片不能显示时显示的文本</li>
+<li>title: 图片标题,选题时显示</li>
+<li>width/height: <code>两种赋值方式 像素和百分比(上级元素的百分比),如果只设置宽度,高度会等比例缩放</code></li>
+<li>支持的格式: <code>jpe/jpeg png gif</code></li>
+</ul>
+<h1 id="超链接-a"><a href="#超链接-a" class="headerlink" title="超链接 a"></a>超链接 a</h1><ul>
+<li>如果不写<code>href</code>属性就是文本</li>
+<li>href属性表示<code>路径</code>,<code>可以是相对路径也可以是绝对路径,可指向页面资源也可以指向文件资源,指向资源时如果能浏览则浏览不能浏览则下载.</code></li>
+<li><code>a标签包裹文本则时文本超链接,包裹图片则是图片超链接</code></li>
+</ul>
+<h1 id="表格标签-table"><a href="#表格标签-table" class="headerlink" title="表格标签 table"></a>表格标签 table</h1><ul>
+<li>table: <code>border边框粗细 cellspacing单元格间距</code></li>
+<li><code>tr 表示行</code></li>
+<li><code>td 表示列</code></li>
+<li><code>colspan 跨列</code></li>
+<li><code>rowspan 跨行</code></li>
+<li><code>caption 表格标题</code></li>
+</ul>
+<h1 id="表单form"><a href="#表单form" class="headerlink" title="表单form"></a>表单form</h1><ul>
+<li>作用: 获取用户输入的各种信息提交到服务器</li>
+<li>学习表单主要学习的就是表单有哪些控件: 文本框/密码框/多选/单选/下拉选等<pre><code class="html">&lt;form&gt;
+  用户名:&lt;input type=&quot;text&quot; name=&quot;username&quot; value=&quot;abc&quot; placeholder=&quot;输入用户名&quot;&gt;&lt;br&gt;
+  密码:&lt;input type=&quot;password&quot; name=&quot;password&quot; placeholder=&quot;输入密码&quot;&gt;&lt;br&gt;
+  性别:&lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;m&quot; id=&quot;r1&quot;&gt;&lt;label for=&quot;r1&quot;&gt;男&lt;/label&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;w&quot; id=&quot;r2&quot;&gt;&lt;label for=&quot;r2&quot;&gt;女&lt;/label&gt;&lt;br&gt;
+  兴趣爱好:&lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;cy&quot;&gt;抽烟
+  &lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;hj&quot;&gt;喝酒
+  &lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;tt&quot;&gt;烫头&lt;br&gt;
+  生日:&lt;input type=&quot;date&quot; name=&quot;birthday&quot;&gt;&lt;br&gt;
+  靓照:&lt;input type=&quot;file&quot; name=&quot;pic&quot;&gt;&lt;br&gt;
+  所在城市:&lt;select name=&quot;city&quot;&gt;
+          &lt;option&gt;请选择&lt;/option&gt;
+          &lt;option value=&quot;北京&quot;&gt;北京&lt;/option&gt;
+          &lt;option selected=&quot;selected&quot;&gt;上海&lt;/option&gt;
+          &lt;option&gt;香港&lt;/option&gt;
+          &lt;/select&gt;&lt;br&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;注册&quot;&gt;
+  &lt;!-- 重置按钮 --&gt;
+  &lt;input type=&quot;reset&quot; &gt;
+  &lt;!-- 自定义按钮 --&gt;
+  &lt;input type=&quot;button&quot; value=&quot;按钮&quot;&gt;
+&lt;/form&gt;</code></pre>
 </li>
 </ul>
+<h1 id="CSS的三种引入方式"><a href="#CSS的三种引入方式" class="headerlink" title="CSS的三种引入方式"></a>CSS的三种引入方式</h1><ol>
+<li>内联样式: 在标签的<code>style</code>属性中添加css样式代码,弊端:不能复用</li>
+<li>内部样式: 在<code>head</code>标签里面添加<code>style</code>标签,标签体内写样式代码,弊端:只能当前页面复用,不能多页面复用</li>
+<li>外部样式: 在单独的css文件中写样式代码,在html页面通过link标签引入样式文件,可以多页面复用</li>
+<li>优先级: <code>内联优先级最高,内部和外部优先级一样,后执行的覆盖先执行的</code></li>
+</ol>
+<h1 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h1><ol>
+<li>标签名选择器: <code>格式: 标签名{样式代码}</code></li>
+<li>id选择器: <code>格式: #id{样式代码}</code></li>
+<li>类选择器: <code>格式: .class{样式代码}</code></li>
+<li>属性选择器: <code>格式: 标签名[属性名=&#39;值&#39;]{样式代码}</code></li>
+<li>分组选择器: <code>格式: #id,.class,div{样式代码} 将多个选择器合并到一起称为分组选择器</code></li>
+<li>子孙后代选择器: <code>格式: div div p{样式代码} 匹配div里面的div里面的所有p标签(包包括子元素p和所有后代p)</code></li>
+<li>子元素选择器: <code>格式: div&gt;div&gt;p{样式代码} 匹配div里面的div里面的所有子元素p</code></li>
+<li>伪类选择器: <code>选择的是标签的状态: 未访问状态:link 访问过状态:visited 悬停状态:hover 点击状态:active</code></li>
+<li>任意元素选择器: <code>格式: *{代码样式}</code></li>
+</ol>
+<h1 id="常用样式"><a href="#常用样式" class="headerlink" title="常用样式"></a>常用样式</h1><ol>
+<li>背景图片<pre><code class="html">/* 设置背景图片 */
+backgroud-image: url(&quot;../imgs/a.jpg&quot;);
+/* 图片尺寸 */
+backgroud-size: 100px 100px;
+/* 禁止重复 */
+backgroud-repeat: no-repeat;
+/* 设置位置 横向和纵向百分比*/
+backgroud-position: 0% 100%;</code></pre>
+</li>
+<li>显示方式 display<blockquote>
+<p>block: 块级元素,独占一行,可以修改宽高, 包括: h1-h6,p,div等<br>inline: 行内元素,共占一行,不能修改宽高, 包括: b,a,i,small,span<br>inline-block: 行内块元素,共占一行也可以修改宽高, 包括: img</p>
+</blockquote>
+</li>
+<li>盒子模型<ol>
+<li>盒子模型 = 宽高+外边距+边距+内边距</li>
+<li>盒子模型之宽高:<blockquote>
+<p>赋值方式:width/height 2种: <code>1.像素 2.上级元素百分比</code><br>行内元素不能修改宽高</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li>盒子模型之外边距<ol>
+<li>什么是外边距: <code>元素距上级元素或相邻兄弟元素的距离</code></li>
+<li>赋值方式: <code>margin</code><blockquote>
+<p><code>margin-left/right/top/botton:10px;</code><br><code>margin:10px; 4个方向都是10px</code><br><code>margin:10px 20px; 上下10px 左右20px</code>margin:0 auto; 水平居中<code></code>margin:10px 20px 30px 40px; 上 右 下 左 顺时针`</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li>粘连问题: 当元素上边缘和上级元素的上边缘重叠时,给元素添加上外边距会出现粘连问题,给上级元素添加<code>overflow:hidden</code>解决</li>
+<li>盒子模型之边框<blockquote>
+<p>赋值方式: <code>border: 边框粗细(像素) 边框样式 边框颜色;</code><br><code>border-left/right/top/bottom: 边框粗细(像素) 边框样式 边框颜色;</code></p>
+</blockquote>
+</li>
+<li>盒子模型之内边距<blockquote>
+<p>什么是内边距: 元素边缘距内容的距离<br>赋值方式: <code>padding-left/right/top/bottom:10px; padding:10px; padding:10px 0; padding:10px 20px 30px 40px;</code></p>
+</blockquote>
+</li>
+<li>盒子模型总结:<ol>
+<li>宽高: 控制元素的显示大小</li>
+<li>外边距: 控制元素的显示位置</li>
+<li>边框: 控制边框样式的</li>
+<li>内边距: 控制内容位置</li>
+</ol>
+</li>
+</ol>
+<h1 id="文本和字体相关样式"><a href="#文本和字体相关样式" class="headerlink" title="文本和字体相关样式"></a>文本和字体相关样式</h1><ol>
+<li>水平对齐方式: text-align:left/right/center;</li>
+<li>文本修饰: text-decoration:overline/underline/line-through/none(去掉文本修饰);</li>
+<li>文本颜色: color:red;</li>
+<li>文本阴影: text-shadow:颜色 x偏移值 y偏移值 浓度(值越大越模糊);</li>
+<li>行高: line-height:30px;</li>
+<li>字体大小: fint-size:20px;</li>
+<li>加粗: font-weight:bold/normal;</li>
+<li>斜体: font-style:italic;</li>
+<li>字体设置: font-family: cursive,xxx,xxx,xxx;</li>
+<li>字体大小+字体设置: font:20px xxx,xxx,xxx;</li>
+</ol>
+<h1 id="CSS的三大特性"><a href="#CSS的三大特性" class="headerlink" title="CSS的三大特性"></a>CSS的三大特性</h1><ol>
+<li>继承性: <code>元素可以继承上级元素文本的字体相关的样式,部分标签自带效果不受继承影响,比如:超链接的字体颜色,h1-h6字体大小</code></li>
+<li>层叠性: <code>不同的选择器有可能选择到同一个标签,如果作用的样式不同,则全部层叠到一起全部生效,如果作用的样式相同则由优先级据顶顶</code></li>
+<li>优先级: <code>各个选择器之间的优先级,作用范围越小,优先级越高.id&gt;class&gt;标签名&gt;继承(属性间接选中)</code></li>
+</ol>
+<h1 id="position定位方式-4-1种"><a href="#position定位方式-4-1种" class="headerlink" title="position定位方式: 4+1种"></a>position定位方式: 4+1种</h1><ol>
+<li>position静态定位(文档流定位)<blockquote>
+<p>元素默认的定位方式<code>特点: 块级元素从上到下排列,行内元素从左向右排序</code><br>格式:<code>position:static;</code><br>通过外边距控制元素所在位置</p>
+</blockquote>
+</li>
+<li>position相对定位<blockquote>
+<p><code>特点: 元素不脱离文档流</code><br>格式:<code>position:relative;</code><br>通过left/right/top/bottom相对于元素初始位置做偏移</p>
+</blockquote>
+</li>
+<li>position绝对定位<blockquote>
+<p><code>position:absolute；position:relative绝对定位使用通常是父级定义position:relative定位，子级定义position:absolute绝对定位属性，并且子级使用left或right和top或bottom进行绝对定位。</code></p>
+</blockquote>
+</li>
+<li>position固定定位<blockquote>
+<p><code>固定定位：相对于屏幕视口（viewport）的位置！position: fixed;</code></p>
+</blockquote>
+</li>
+<li>浮动定位<blockquote>
+<p><code>格式: float</code><br><code>浮动的框可以向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。由于浮动框不在文档的普通流中，所以文档的普通流中的块框表现得就像浮动框不存在一样。</code></p>
+</blockquote>
+</li>
+</ol>
+<h1 id="溢出设置"><a href="#溢出设置" class="headerlink" title="溢出设置"></a>溢出设置</h1><blockquote>
+<p><code>hidden 超出隐藏</code><br><code>visible 超出显示</code><br><code>scrool 超出滚动显示</code></p>
+</blockquote>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -612,12 +793,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Java包装类</p>
+    <p><span class="copy-title">文章标题:</span>Web Html</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="ZhYun1on9">ZhYun1on9</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-12-21, 11:52:54</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-21, 14:42:26</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/21/Java%E5%8C%85%E8%A3%85%E7%B1%BB/" title="Java包装类">http://yoursite.com/2019/12/21/Java%E5%8C%85%E8%A3%85%E7%B1%BB/</a>
+    <p><span class="copy-title">发布时间:</span>2019-12-26, 11:38:33</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-26, 17:02:14</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/26/WebHTML/" title="Web Html">http://yoursite.com/2019/12/26/WebHTML/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
