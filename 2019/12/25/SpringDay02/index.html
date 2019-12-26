@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>ServletDay04 | ZhYun1on9</title>
-  <meta name="keywords" content=" Web , Servlet , Tomcat ">
-  <meta name="description" content="ServletDay04 | ZhYun1on9">
+  <title>Java Spring Day02 | ZhYun1on9</title>
+  <meta name="keywords" content=" Java , 框架 , Spring ">
+  <meta name="description" content="Java Spring Day02 | ZhYun1on9">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Spring关于Spring的概念 对象容器: 集合Web容器,Servlet容器:Java Web服务器Java Bean 容器,Be容器,IOC,Spring容器: Srping IOC  注解 Spring支持注解方式声明Bean组件,这种方式的好处是可以利用编译期对注解进行检查,减少错误的繁盛  利用注解创建Bean组件 创建项目,导入Spring&lt;dependencies&gt;">
 <meta property="og:type" content="article">
@@ -437,9 +437,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-ServletDay04" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-SpringDay02" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">ServletDay04</h1>
+        <h1 class="article-title">Java Spring Day02</h1>
     
     <div class="article-meta">
         
@@ -447,25 +447,25 @@
         
         <span class="book">
             
-                <a  data-rel="Servlet">Servlet</a>
+                <a  data-rel="框架">框架</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a class="color4">Web</a>
+            <a class="color5">Java</a>
             
-            <a class="color3">Servlet</a>
+            <a class="color3">框架</a>
             
-            <a class="color2">Tomcat</a>
+            <a class="color2">Spring</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-17 23:41:42'>2019-12-17 23:39</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-26 08:33:13'>2019-12-25 23:40</time>
         
     </div>
     <div class="article-meta">
@@ -487,7 +487,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Thymeleaf"><span class="toc-text">Thymeleaf</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#如何使用Thymeleaf"><span class="toc-text">如何使用Thymeleaf</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Thymeleaf工具包"><span class="toc-text">Thymeleaf工具包</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Spring-IOC"><span class="toc-text">Spring IOC</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对象生命周期管理方法"><span class="toc-text">对象生命周期管理方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DI依赖注入"><span class="toc-text">DI依赖注入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#利用Spring和接口实现解耦"><span class="toc-text">利用Spring和接口实现解耦</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#立即初始化和懒惰初始化"><span class="toc-text">立即初始化和懒惰初始化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#利用Spring-IOC-DI功能管理DBCP连接池"><span class="toc-text">利用Spring IOC&#x2F;DI功能管理DBCP连接池</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#自动注入功能"><span class="toc-text">自动注入功能</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -503,41 +503,261 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Thymeleaf"><a href="#Thymeleaf" class="headerlink" title="Thymeleaf"></a>Thymeleaf</h1><ul>
-<li>Thymeleaf是一个目前比较流行的框架之一,功能是将html页面作为一个模板,并根据页面中的特殊标记,对页面中的内容进行修改或替换.<h2 id="如何使用Thymeleaf"><a href="#如何使用Thymeleaf" class="headerlink" title="如何使用Thymeleaf"></a>如何使用Thymeleaf</h2></li>
+        <h1 id="Spring-IOC"><a href="#Spring-IOC" class="headerlink" title="Spring IOC"></a>Spring IOC</h1><h2 id="对象生命周期管理方法"><a href="#对象生命周期管理方法" class="headerlink" title="对象生命周期管理方法"></a>对象生命周期管理方法</h2><ul>
+<li>可以在对象的创建以后自动执行其初始化方法,用于初始化资源</li>
+<li>可以在对象销毁之前自动执行其销毁方法,用于回收资源</li>
+<li>注意: 单例的时候Spring容器或调用销毁方法,但是多个实例时候,Spring不会管理销毁方法.也就是设置 Scope=”prototype” 则 destroy-method=”close” 失效利用Spring调用对象的生命周期管理方法</li>
 </ul>
 <ol>
-<li>添加相关的jar包坐标<pre><code> &lt;dependency&gt;
-     &lt;groupId&gt;org.thymeleaf&lt;/groupId&gt;
-     &lt;artifactId&gt;thymeleaf&lt;/artifactId&gt;
-     &lt;version&gt;3.0.11.RELEASE&lt;/version&gt;
- &lt;/dependency&gt;</code></pre></li>
+<li><p>创建需要管理生命周期的JavaBean</p>
+<pre><code>public class Logger{
+ private PrintWriter out;
+ public void init()thorws IOException{
+     out = new PrintWriter(&quot;log.txt&quot;);
+     System.out.println(&quot;打开文件&quot;);
+ }
+
+ public void log(String msg){
+     out.println(new Date()+&quot;:&quot;+msg);
+     out.flush();
+ }
+
+ public void destroy(){
+     out.close();
+     System.out.println(&quot;关闭文件&quot;);
+ }
+}</code></pre></li>
+<li><p>配置Spring applicationContext.xml</p>
+<pre><code>&lt;!-- 利用Spring调用对象的生命周期关闭方法 --&gt;
+&lt;bean id=&quot;logger&quot; class=&quot;day02.Logger&quot; init-method=&quot;init&quot; destroy-method=&quot;destroy&quot;&gt;</code></pre></li>
+<li><p>测试</p>
+<pre><code>@Test
+public void testInitDestroy(){
+ // 测试对象生命周期管理方法
+ Logger logger = ctx.getBean(&quot;logger&quot;,Logger.class);
+ logger.log(&quot;天气不错&quot;);
+ logger.log(&quot;下雪了&quot;);
+}</code></pre></li>
 </ol>
-<h1 id="Thymeleaf工具包"><a href="#Thymeleaf工具包" class="headerlink" title="Thymeleaf工具包"></a>Thymeleaf工具包</h1><pre><code>    private static TemplateEngine te;
-    static {
-        te = new TemplateEngine();
-        //解析器
-        ClassLoaderTemplateResolver r =
-            new ClassLoaderTemplateResolver();
-        r.setCharacterEncoding(&quot;UTF-8&quot;);//字符集
-        r.setSuffix(&quot;.html&quot;);//后缀
-        te.setTemplateResolver(r);//关联
-    }
-    public static void write(String fileName,
-            Context context,
-            HttpServletResponse response) throws IOException {
-        //将html页面和容器整合成一个新的html
-        String html = 
-                te.process(fileName, context);
-        //把新的html返回给客户端
-        response.setContentType(
-                &quot;text/html;charset=utf-8&quot;);
-        //异常抛出
-        PrintWriter pw = response.getWriter();
-        pw.print(html);
-        pw.close();
-    }
+<h1 id="DI依赖注入"><a href="#DI依赖注入" class="headerlink" title="DI依赖注入"></a>DI依赖注入</h1><ul>
+<li><p>IOC/DI 控制反转/依赖注入</p>
+<pre><code>  依赖:软件功能执行期间使用了另外一个对象,称为依赖另一个对象
+  依赖注入: 是指在使用组件之前,将被依赖的组件赋值到目标位置
+  Spring提供了依赖注入功能</code></pre><p>  包含了依赖注入关系类:</p>
+</li>
+<li><p>案例:</p>
+<ol>
+<li><p>编写斧子类</p>
+<pre><code>public class Axe implements Serializable{
+private String name=&quot;开天斧&quot;;
+
+public String toString(){
+ return name;
+}
+}</code></pre></li>
+<li><p>编写工人类</p>
+<pre><code>public class Worker implements Serializable{
+private String name=&quot;光头强&quot;;
+private Axe axe;// 拥有axe
+public void setAxe(Axe axe){
+ this.axe=axe;
+ System.out.println(&quot;注入axe对象&quot;);
+}
+public void work(){
+ // work()方法依赖axe对象
+ System.out.ptintln(name+&quot;使用&quot;+axe+&quot;砍树&quot;);
+}
+}</code></pre></li>
+<li><p>配置</p>
+<pre><code class="java">&lt;!-- 依赖注入DI --&gt;
+&lt;bean id=&quot;a1&quot; class=&quot;day02.Axe&quot; /&gt;
+&lt;bean id=&quot;qiang&quot; class=&quot;day02.Worker&quot;&gt;
+&lt;!-- 注入属性 name=&quot;axe&quot; 则自动查找setAxe方法&gt;
+&lt;property name=&quot;axe&quot; ref=&quot;a1&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;</code></pre>
+</li>
+<li><p>测试</p>
+<pre><code class="java">@Test
+public void testQiang(){
+// 测试依赖注入
+Worker qiang = ctx.getBean(&quot;qiang&quot;,Worker.class);
+// 如果axe属性不为null,则注入成功
+qiang.work();
+// 测试懒惰初始化
+Logger logger = ctx.getBean(&quot;logget&quot;,Logger.class);
+logger.log(&quot;OK&quot;);
 }</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="利用Spring和接口实现解耦"><a href="#利用Spring和接口实现解耦" class="headerlink" title="利用Spring和接口实现解耦"></a>利用Spring和接口实现解耦</h1><ul>
+<li>解耦: 将紧耦合调整为松耦合</li>
+<li>案例:<ol>
+<li>编写接口<pre><code class="java">public interface Tool{
+}</code></pre>
+</li>
+<li>编写斧子 <pre><code class="java">public class Axe implements Tool,Serializable{
+private String name=&quot;斧子&quot;;
+public String toString(){
+ return name;
+}
+}</code></pre>
+</li>
+<li>编写锯<pre><code class="java">public class Saw implements Tool,Serializable{
+private String name=&quot;电锯&quot;;
+public String toString(){
+ reruen name;
+}
+}</code></pre>
+</li>
+<li>编写工人,工人依赖于工具接口<pre><code class="java">public class Worker implements Serializable{
+private String name=&quot;光头强&quot;;
+private Tool tool;
+public void setTool(Tool tool){
+ this.tool=tool;
+}
+public void setName(String name){
+ this.name=name;
+}
+public void work(){
+ System.out.println(name+&quot;使用&quot;+tool+&quot;砍树&quot;);
+}
+}</code></pre>
+</li>
+<li>配置<pre><code>&lt;!-- 解耦:Spring和接口配合,实现组件之间解耦,也就是紧耦合转换为松耦合关系--&gt;
+&lt;bean id=&quot;ax&quot; class=&quot;day02.demo.Axe&quot;/&gt;
+&lt;bean id=&quot;sw&quot; class=&quot;day02.demo.Saw&quot;/&gt;
+&lt;bean id=&quot;worker&quot; class=&quot;day02.demo.Worker&quot;&gt;
+&lt;!-- property 可以注入Bean对象--&gt;
+&lt;property name=&quot;tool&quot; ref=&quot;ax&quot;/&gt;
+&lt;!-- property 可以注入基本值--&gt;
+&lt;property name=&quot;name&quot; value=&quot;强哥&quot;&gt;
+&lt;/bean&gt;</code></pre></li>
+<li>测试<pre><code>@Test
+public void testWorker(){
+// 测试解耦
+Worker worker = ctx.getBean(&quot;worker&quot;,Worker.class);
+worker.work();
+}</code></pre></li>
+</ol>
+</li>
+</ul>
+<h1 id="立即初始化和懒惰初始化"><a href="#立即初始化和懒惰初始化" class="headerlink" title="立即初始化和懒惰初始化"></a>立即初始化和懒惰初始化</h1><ul>
+<li>Spring中单例对象默认时候采用立即初始化,也就是在Spring启动时候立即初始化全部单例对象,如果有初始化方法就立即执行初始化方法.</li>
+<li>懒惰初始化: Spring启动时候不会立即创建对象,在使用对象时候才创建对象. lazy-init=”true”;</li>
+</ul>
+<h1 id="利用Spring-IOC-DI功能管理DBCP连接池"><a href="#利用Spring-IOC-DI功能管理DBCP连接池" class="headerlink" title="利用Spring IOC/DI功能管理DBCP连接池"></a>利用Spring IOC/DI功能管理DBCP连接池</h1><ol>
+<li>导入DBCP和MYSQL驱动<pre><code>&lt;dependency&gt;
+     &lt;groupId&gt;mysql&lt;/groupId&gt;
+     &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+     &lt;version&gt;5.1.6&lt;/version&gt;
+ &lt;/dependency&gt;
+ &lt;dependency&gt;
+     &lt;groupId&gt;commons-dbcp&lt;/groupId&gt;
+     &lt;artifactId&gt;commons-dbcp&lt;/artifactId&gt;
+     &lt;version&gt;1.4&lt;/version&gt;
+&lt;/dependency&gt;</code></pre></li>
+<li>设置JDK版本<pre><code>&lt;properties&gt;
+   &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;
+   &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;    
+&lt;/properties&gt;</code></pre></li>
+<li>添加jdbc.propertis<pre><code>url=jdbc:mysql://localhost:3306/smartblogs?useUnicod=true&amp;characterEncoding=UTF-8
+username=root
+password=qaz123
+driver=com.mysql.jdbc.Driver
+initialSize=3
+maxActive=5</code></pre></li>
+<li>配置Spring文件,管理DBCP连接池<pre><code>&lt;!-- 配置DBCP连接池对象 --&gt;
+&lt;bean id=&quot;ds&quot; class=&quot;org.apache.commons.dbcp.BasicDataSource&quot; destroy-method=&quot;close&quot;&gt;
+    &lt;property name=&quot;driverClassName&quot; value=&quot;#{jdbc.driver}&quot; /&gt;
+    &lt;property name=&quot;url&quot; value=&quot;#{jdbc.url}&quot; /&gt;
+    &lt;property name=&quot;username&quot; value=&quot;#{jdbc.username}&quot; /&gt;
+    &lt;property name=&quot;password&quot; value=&quot;#{jdbc.password}&quot; /&gt;
+    &lt;property name=&quot;initialSize&quot; value=&quot;#{jdbc.initialSize}&quot; /&gt;
+    &lt;property name=&quot;maxActive&quot; value=&quot;#{jdbc.maxActive}&quot; /&gt;
+&lt;/bean&gt;
+&lt;!-- Spring读取Properties --&gt;
+&lt;util:properties id=&quot;jdbc&quot; location=&quot;classpath:jdbc.properties&quot;&gt;&lt;/util:properties&gt;</code></pre></li>
+<li>编写测试案例,连接到数据库执行SQL<pre><code>@Test
+public void testDS(){
+ // 测试数据库连接池
+ // BasicDataSource的父类型是java.sql.DataSource,所以DataSource定义的变量引用BasiDataSource类型的实例
+ DataSource ds = ctx.getBean(&quot;ds&quot;,DataSource.class);
+ try(Connection conn = ds.getConnection()){
+     String sql =&quot;select &#39;Hello World&#39; as s&quot;;
+     Statement st = conn.createStatement();
+     ResultSet rs = st.executeQuery(sql);
+     while(rs.next()){
+         String s = rs.getString(&quot;s&quot;);
+         System.out.println(s);
+     }
+ }catch(Exception e){
+     e.prinStackTrace();
+ }
+}</code></pre></li>
+</ol>
+<h1 id="自动注入功能"><a href="#自动注入功能" class="headerlink" title="自动注入功能"></a>自动注入功能</h1><ol>
+<li><p>按照名字注入byName</p>
+<blockquote>
+<p>将Spring中的Bean ID与Bean属性名进行匹配,如果一样就自动注入</p>
+</blockquote>
+</li>
+<li><p>配置</p>
+<pre><code>&lt;!-- 按照名字自动注入,worker包含setTool方法 Bean属性名tool,设置autowire=&quot;byName&quot;.以后Spring自动启动时候根据Bean属性名tool去匹配Spring中的Bean id,如果找到id为tool的对象,就进行注入 --&gt;
+&lt;bean id=&quot;worker&quot; autowire=&quot;byName&quot; class=&quot;day02.demo.Worker&quot;&gt;&lt;/bean&gt;
+&lt;bean id=&quot;tool&quot; class=&quot;day02.demo.Axe&quot;&gt;&lt;/bean&gt;</code></pre></li>
+<li><p>测试</p>
+<pre><code>public class TestCaseDay02ByName {
+ ClassPathXmlApplicationContext ctx;
+ @Before
+ public void init() {
+     ctx = new ClassPathXmlApplicationContext(&quot;beans1.xml&quot;);
+ }
+
+ @Test
+ public void testWorker() {
+     day02.demo.Worker worker = ctx.getBean(&quot;worker&quot;,day02.demo.Worker.class);
+     worker.work();
+ }
+
+ @After
+ public void destroy() {
+     ctx.close();
+ }
+}</code></pre></li>
+<li><p>按照类型注入byType</p>
+<blockquote>
+<p>将Spring中Bean的类型和Bean属性的类型进行匹配,如果兼容就注入.<br>如果一个Bean属性匹配到两个类型兼容的Bean就报错</p>
+</blockquote>
+</li>
+<li><p>配置</p>
+<pre><code>     &lt;!-- 按照自动注入,Spring在设置了autowire=&quot;byType&quot;.以后会自动将Bean属性的类型以Spring中每个Bean的类型进行匹配,
+ 如果兼容就注入.Bean属性类型是Tool类型,Saw的类型是Saw和Tool --&gt;
+ &lt;bean id=&quot;worker&quot; autowire=&quot;byType&quot; class=&quot;day02.demo.Worker&quot;&gt;&lt;/bean&gt;
+ &lt;bean class=&quot;day02.demo.Saw&quot;&gt;&lt;/bean&gt;</code></pre></li>
+<li><p>测试</p>
+<pre><code>public class TestCaseDay02ByType {
+ ClassPathXmlApplicationContext ctx;
+
+ @Before
+ public void init() {
+     ctx = new ClassPathXmlApplicationContext(&quot;beans2.xml&quot;);
+ }
+
+ @Test
+ public void testByType() {
+     day02.demo.Worker worker = ctx.getBean(&quot;worker&quot;,day02.demo.Worker.class);
+     worker.work();
+ }
+
+ @After
+ public void destroy() {
+     ctx.close();
+ }
+}</code></pre></li>
+</ol>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
     </div>
@@ -550,12 +770,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>ServletDay04</p>
+    <p><span class="copy-title">文章标题:</span>Java Spring Day02</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="ZhYun1on9">ZhYun1on9</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-12-17, 23:39:51</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-17, 23:41:42</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/17/ServletDay04/" title="ServletDay04">http://yoursite.com/2019/12/17/ServletDay04/</a>
+    <p><span class="copy-title">发布时间:</span>2019-12-25, 23:40:37</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-26, 08:33:13</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/25/SpringDay02/" title="Java Spring Day02">http://yoursite.com/2019/12/25/SpringDay02/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
