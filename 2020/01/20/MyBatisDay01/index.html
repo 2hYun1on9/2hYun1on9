@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Java SpringMVC Day01 | ZhYun1on9</title>
-  <meta name="keywords" content=" Java , 框架 , Spring , Spring MVC ">
-  <meta name="description" content="Java SpringMVC Day01 | ZhYun1on9">
+  <title>MyBatis | ZhYun1on9</title>
+  <meta name="keywords" content=" Java , 框架 , MyBatis ">
+  <meta name="description" content="MyBatis | ZhYun1on9">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="十大内部排序算法 选择排序  直接排序,堆排序   交换排序  冒泡排序.快速排序   插入排序  直接插入排序,折半插入排序   归并排序  桶式排序  基数排序   算法的五大特征   特性 说明    输入(input) 有0个或多个输入数据,这些必须有清楚的描述和定义   输出(Output) 至少有1个或多个输出结果,不可以没有输出结果   有穷性(有限性,Finiteness) 算法在">
 <meta property="og:type" content="article">
@@ -518,9 +518,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-SpringMVCDay01" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-MyBatisDay01" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Java SpringMVC Day01</h1>
+        <h1 class="article-title">MyBatis</h1>
     
     <div class="article-meta">
         
@@ -539,16 +539,14 @@
             
             <a class="color3">框架</a>
             
-            <a class="color2">Spring</a>
-            
-            <a class="color1">Spring MVC</a>
+            <a class="color3">MyBatis</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-26 10:43:02'>2019-12-26 10:22</time>
+        创建时间:<time class="date" title='更新时间: 2020-01-20 23:43:26'>2020-01-20 23:43</time>
         
     </div>
     <div class="article-meta">
@@ -570,7 +568,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Spring-MVC"><span class="toc-text">Spring MVC</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#搭建Spring-MVC"><span class="toc-text">搭建Spring MVC</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hello-World"><span class="toc-text">Hello World</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#什么是MVC"><span class="toc-text">什么是MVC</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#接受表单参数"><span class="toc-text">接受表单参数</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MyBatis框架的作用"><span class="toc-text">MyBatis框架的作用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-创建项目"><span class="toc-text">1.创建项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-连接数据库"><span class="toc-text">2.连接数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-编写抽象方法"><span class="toc-text">3.编写抽象方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-配置SQL语句"><span class="toc-text">4.配置SQL语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-插入数据时获取自增的id"><span class="toc-text">5. 插入数据时获取自增的id</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-关于-内的名称"><span class="toc-text">6. 关于#{}内的名称</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -586,114 +584,171 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Spring-MVC"><a href="#Spring-MVC" class="headerlink" title="Spring MVC"></a>Spring MVC</h1><blockquote>
-<p>Spring提供的Web编程框架,是Web程序的半成品,相对于Servlet开发Web程序简化很多倍</p>
-</blockquote>
-<h1 id="搭建Spring-MVC"><a href="#搭建Spring-MVC" class="headerlink" title="搭建Spring MVC"></a>搭建Spring MVC</h1><ol>
-<li>导入Spring MVC<pre><code>&lt;dependency&gt;
-       &lt;groupId&gt;junit&lt;/groupId&gt;
-       &lt;artifactId&gt;junit&lt;/artifactId&gt;
-       &lt;version&gt;4.12&lt;/version&gt;
-   &lt;/dependency&gt;
-   &lt;dependency&gt;
-       &lt;groupId&gt;org.springframework&lt;/groupId&gt;
-       &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;
-       &lt;version&gt;4.3.25.RELEASE&lt;/version&gt;
-&lt;/dependency&gt;</code></pre></li>
-<li>配置web.xml<pre><code>&lt;servlet&gt;
- &lt;description&gt;&lt;/description&gt;
- &lt;display-name&gt;DispatcherServlet&lt;/display-name&gt;
- &lt;servlet-name&gt;DispatcherServlet&lt;/servlet-name&gt;
- &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
-&lt;init-param&gt;
-   &lt;description&gt;&lt;/description&gt;
-   &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
-   &lt;param-value&gt;classpath:beans.xml&lt;/param-value&gt;
-&lt;/init-param&gt;
- &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
-&lt;/servlet&gt;
-&lt;servlet-mapping&gt;
- &lt;servlet-name&gt;DispatcherServlet&lt;/servlet-name&gt;
- &lt;url-pattern&gt;*.do&lt;/url-pattern&gt;
-&lt;/servlet-mapping&gt;</code></pre><blockquote>
-<p>注意需要配置 load-on-startup 属性,表示在Web服务器启动时候立即创建DispatcherServlet的实例</p>
-</blockquote>
+        <h1 id="MyBatis框架的作用"><a href="#MyBatis框架的作用" class="headerlink" title="MyBatis框架的作用"></a>MyBatis框架的作用</h1><ul>
+<li><p>简化数据库编程.</p>
 </li>
-<li>在resource文件夹添加 beans.xml<pre><code class="java">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
- xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
- xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
- xmlns:jdbc=&quot;http://www.springframework.org/schema/jdbc&quot;
- xmlns:jee=&quot;http://www.springframework.org/schema/jee&quot;
- xmlns:tx=&quot;http://www.springframework.org/schema/tx&quot;
- xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;
- xmlns:mvc=&quot;http://www.springframework.org/schema/mvc&quot;
- xmlns:util=&quot;http://www.springframework.org/schema/util&quot;
- xmlns:jpa=&quot;http://www.springframework.org/schema/data/jpa&quot;
- xsi:schemaLocation=&quot;
-     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
-     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
-     http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd
-     http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd
-     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
-     http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd
-     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
-     http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
-     http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd&quot;&gt;
+<li><p>使用MyBatis开发增删改查功能时,每个功能值需要写出抽象方法与对应的SQL语句即可!</p>
+<h2 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1.创建项目"></a>1.创建项目</h2><p>创建<strong>Maven Project</strong>,创建过程中勾选<code>Create a simple project,Group id</code>为<code>cn.XXX</code>,<strong>Artifact Id</strong>为<code>mybatis</code>,<strong>Packaging</strong>为<code>war</code>.<br>创建成功后,生成<code>web.xml</code>,在项目属性中勾选Tomcat,从前序项目中复制Spring的配置文件到当前项目中,从前序项目中复制<em>web.xml中关于*</em><code>DispatchServilet</code><strong>和</strong><code>CharacterEncodingFilter</code><strong>的配置到当前项目中,从前序项目中的pom.xml</strong>文件中复制依赖到当前项目中.<br>在使用MyBatis框架时,需要先添加<code>mybatis</code>的依赖:</p>
+<pre><code class="java">&lt;!-- MyBatis框架的依赖 --&gt;
+&lt;!-- 可选版本:3.5.0~3.5.3 --&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;org.mybatis&lt;/groupId&gt;
+  &lt;artifactId&gt;mybatis&lt;/artifictId&gt;
+  &lt;version&gt;3.5.3&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+<p>MyBatis框架本身可以直接单独使用,但是配置比较麻烦,整合Spring后可以简化许多,所以,还应该添加MyBatis整合Spring框架的<code>mybatis-spring</code>的依赖:</p>
+<pre><code class="java">&lt;!-- MyBatis整合Spring的依赖 --&gt;
+&lt;!-- 可选版本:2.0.0~2.0.3 --&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;org.mybatis&lt;/groupId&gt;
+  &lt;artifactId&gt;mybatis-spring&lt;/artifictId&gt;
+  &lt;version&gt;2.0.3&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+<p>由于底层实现依然使用了JDBC技术,需要添加<code>spring-jdbc</code>的依赖,添加的这个依赖的版本必须与正在使用的<code>spring-webmvc</code>的一致.<br>结合数据库编程,原理上还是得先连接到数据库,所以,需要添加<code>commons-dbcp</code>数据库连接池得依赖:</p>
+<pre><code class="java">&lt;!-- 数据库连接池 --&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;commons-dbcp&lt;/groupId&gt;
+  &lt;artifactId&gt;commons-dbcp&lt;/artifictId&gt;
+  &lt;version&gt;1.4&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+<p>由于使用得是MySQL数据库,还需要添加数据库连接的依赖<code>mysql-connector-java</code>:</p>
+<pre><code class="java">&lt;!-- 数据库连接驱动 --&gt;
+&lt;!-- 可选版本:5.1.40~5.1.48 --&gt;
+&lt;!-- 可选版本:8.0.11~8.0.18 --&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;mysql&lt;/groupId&gt;
+  &lt;artifactId&gt;mysql-connector-java&lt;/artifictId&gt;
+  &lt;version&gt;8.0.18&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+<p>最后,为了检测编程效果,还应该保证已经添加了单元测试<code>junit</code>的依赖:</p>
+<pre><code class="java">&lt;dependency&gt;
+  &lt;groupId&gt;junit&lt;/groupId&gt;
+  &lt;artifactId&gt;junit&lt;/artifictId&gt;
+  &lt;version&gt;4.12&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+<h2 id="2-连接数据库"><a href="#2-连接数据库" class="headerlink" title="2.连接数据库"></a>2.连接数据库</h2><p>首先,在src/main/resources下创建<strong>db.properties</strong>配置文件,在该文件中配置连接数据库的相关信息:</p>
+<pre><code class="properties">url=jdbc:mysql://localhost:3306/数据库名?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=Asia/Chongqing
+driver=com.mysql.cj.jdbc.Driver
+username=root
+password=qaz123
+initialSize=2
+maxActive=5</code></pre>
+<p>将原有的<strong>spring-mvc.xml</strong>复制,粘贴得到<strong>spring-dao.xml,并删除原有的配置,然后在spring-dao.xml添加本次所需的配置!</strong><br>先读取以上db.properties文件:</p>
+<pre><code class="xml">&lt;!-- 读取db.properties中的配置 --&gt;
+&lt;util:properties location=&quot;classpath:db.properties&quot;/&gt;</code></pre>
+<p>然后,配置<code>BasicDataSource</code></p>
+<pre><code class="xml">&lt;!-- 配置数据源BasicDataSource --&gt;
+&lt;bean id=&quot;dataSource&quot; class=&quot;org.apache.commons.dbcp.BasicDataSource&quot;&gt;
+  &lt;property name=&quot;url&quot; value=&quot;#{config.url}&quot;/&gt;
+  &lt;property name=&quot;driverClassName&quot; value=&quot;#{config.driver}&quot;/&gt;
+  &lt;property name=&quot;username&quot; value=&quot;#{config.username}&quot;/&gt;
+  &lt;property name=&quot;password&quot; value=&quot;#{config.password}&quot;/&gt;
+  &lt;property name=&quot;initialSize&quot; value=&quot;#{config.initialSize}&quot;/&gt;
+  &lt;property name=&quot;maxActive&quot; value=&quot;#{config.maxActive}&quot;/&gt;
+&lt;/bean&gt;</code></pre>
+<p>最后,编写并执行单元测试:</p>
+<pre><code class="java">public class Tests{
+  BasicDataSource ds;
+  ClassPathXmlApplicationContext ac;
+
+  @Before
+  public void init(){
+      ac = new ClassPathXmlApplicationContext(&quot;spring-dao.xml&quot;);
+  }
+
+  @Test
+  public void getConnection() throws SQLException{
+      ds = ac.getBean(&quot;dataSource&quot;,BasicDataSource.class);
+      Connection conn = ds.getCononection();
+      System.out.println(conn);
+  }
+
+  @After
+  public void destroy(){
+      ac.close;
+  }
+}</code></pre>
+<h2 id="3-编写抽象方法"><a href="#3-编写抽象方法" class="headerlink" title="3.编写抽象方法"></a>3.编写抽象方法</h2><p>目标: 向<code>t_user</code>数据表中插入1条用户数据.<br>MyBatis要求抽象方法必须定义在接口中!在需要先创建<code>cn.xxx.mybatis.UserMapper</code>接口:</p>
+<pre><code class="java">public interface UserMapper{
 </code></pre>
 </li>
-</ol>
-</beans>
-```
-4. 部署测试: 服务器控制台出现如下信息则表示成功!
-```
-FrameworkServlet 'DispatcherServlet':initialization completed in 257 ms
-```
-
-<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><ol>
-<li>修改配置文件 beans.xml<pre><code class="java">&lt;context:component-scan base-package=&quot;cn.tedu.web&quot;&gt;&lt;/context:component-scan&gt;
-&lt;mvc:annotation-driven/&gt;</code></pre>
-</li>
-<li>添加控制器<pre><code>@Controller
-public class DemoController{
- @RequestMapping(&quot;/hello.do&quot;)
- @ResponseBody
- public String hello(){
-     System.out.println(&quot;Hello World&quot;);
-     return &quot;OK&quot;;
- }
-}</code></pre></li>
-<li>部署测试<pre><code class="http"> http://localhost:8080/springmvc1/hello.do</code></pre>
-</li>
-</ol>
-<h1 id="什么是MVC"><a href="#什么是MVC" class="headerlink" title="什么是MVC"></a>什么是MVC</h1><blockquote>
-<p><code>MVC是经典的GUI用户界面设计模式.几乎所有的GUI都采用了MVC模式.</code><br><code>Web界面开发时也普遍采用了MVC模式</code><br><code>SpringMVC 是Spring按照MVC模式设计的一套WEB用户界面框架!</code><br><code>SpringMVC是半成品,可以快速的开发Web用户界面</code><br>        - M Modol模型,业务模型,封装软件的业务功能<br>        - V View 视图,就是用户看到的界面<br>        - C Controller 控制器,处理用户的请求,将请求发送到模型,再根据模型反馈的结果,选择适当视图显示.</p>
-</blockquote>
-<h1 id="接受表单参数"><a href="#接受表单参数" class="headerlink" title="接受表单参数"></a>接受表单参数</h1><blockquote>
-<p>SpringMVC提供自动化的表单参数处理功能</p>
-</blockquote>
-<ol>
-<li>编写表单 login.html<pre><code class="html">&lt;form action=&quot;login.do&quot; method=&quot;get&quot;&gt;
- &lt;div&gt;
-     &lt;lable&gt;用户名:&lt;/lable&gt;&lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;
- &lt;/div&gt;
- &lt;div&gt;
-     &lt;lable&gt;密码:&lt;/lable&gt;&lt;input type=&quot;password&quot; name=&quot;password&quot;&gt;
- &lt;/div&gt;
- &lt;input type=&quot;submit&quot; vlaue=&quot;登录&quot;&gt;
-&lt;/form&gt;</code></pre>
-</li>
-<li>编写控制器<pre><code class="java">@RequestMapping(&quot;/login.do&quot;)
-@ResponseBody
-public String login(String username,String password){
- if(&quot;Tom&quot;.equals(username) &amp;&amp; &quot;123456&quot;.equals(password)){
-     return &quot;OK&quot;;
- }else{
-     return &quot;false&quot;;
- }
+</ul>
+<pre><code>然后,再接口中添加抽象方法,关于抽象方法的声明原则:
+    1. 如果将要执行的SQL语句是增,删,改类型的,则使用`Integer`作为返回值类型,表示&quot;受影响的行数&quot;,也可以使用`void`作为返回值类型,表示&quot;不关心操作结果&quot;;如果将要执行的SQL语句是查询类型的,返回值类型可以按需设计;
+    2. 方法的名称可以自定义;
+    3. 参数列表可以按需设计
+以增加用户数据为例,需要执行的SQL语句大概是:
+```mysql
+insert into 表名(username,password,age,phone) values(?,?,?);</code></pre><p>则关于”增加用户数据”的抽象方法可以设计为:</p>
+<pre><code class="mysql">Integer addnew(String username,String password,Integer age,String phone)</code></pre>
+<p>当然,也可以将这些参数封装在一个<code>User</code>类中:</p>
+<pre><code class="Java">public class User{
+    // ...
 }</code></pre>
-</li>
-</ol>
+<p>然后,将抽象方法改为:</p>
+<pre><code class="java">Integer addnew(User user);</code></pre>
+<p>接下来,还需要在<strong>spring-dao.xml</strong>中补充关于<code>MapperScannerConfigurer</code>配置,使得框架知道接口文件在哪里:</p>
+<pre><code class="xml">&lt;!-- 配置接口文件的位置 --&gt;
+&lt;bean class=&quot;org.mybatis.spring.mapper.MapperScannerConfigurer&quot;&gt;
+    &lt;property name=&quot;basePackage&quot; value=&quot;cn.XXX.mybatis&quot;/&gt;
+&lt;/bean&gt;</code></pre>
+<p><strong>注意:如果没有正确的配置接口文件的位置,后续,尝试获取对象时,将出现错误,无法获取对象!</strong></p>
+<h2 id="4-配置SQL语句"><a href="#4-配置SQL语句" class="headerlink" title="4.配置SQL语句"></a>4.配置SQL语句</h2><p>在项目中<strong>src/main/resource</strong>下新建<strong>mappers文件夹,并将UserMapper.xml</strong>复制到这个文件夹下<br>这个<strong>UserMapper.xml</strong>就是用于配置SQL语句的文件!<br>这种配置SQL语句的xml文件的根节点时<code>&lt;mapper&gt;</code>,需要在根节点配置<code>namespace</code>属性,取值为对应的接口的全名:</p>
+<pre><code class="xml">&lt;mapper namespace=&quot;cn.XXX.mybatis.UserMapper&quot;&gt;
+
+&lt;/mapper&gt;</code></pre>
+<p>接下来,根据需要执行的SQL语句的种类,从<code>&lt;insert&gt;</code>,<code>&lt;delete&gt;</code>,<code>&lt;update&gt;</code>,<code>&lt;select&gt;</code>中选择对应的子节点,节点的<code>id</code>属性就是对应的抽象方法的名称,然后在节点内部配置SQL语句:</p>
+<pre><code class="xml">&lt;mapper namespace=&quot;cn.XXX.mybatis.UserMapper&quot;&gt;
+    &lt;insert id=&quot;addnew&quot;&gt;
+        INSERT INTO t_user(
+            username,password,
+            age,phone
+        )values(
+            #{username},#{password},
+            #{age},#{phone}
+        )
+    &lt;/insert&gt;
+&lt;/mapper&gt;</code></pre>
+<p>注意:如果配置的时<code>&lt;select&gt;</code>节点,必须在该节点配置<code>resultType</code>或<code>resultMap</code>属性!<br>最后,还需要配置<code>SqlSessionFactoryBean</code>,以指定XMl文件的配置,及框架在执行时将使用的数据源:</p>
+<pre><code class="xml">&lt;!-- 配置XML文件的位置和数据源 --&gt;
+&lt;bean class=&quot;org.mybatis.spring.SqlSessionFactoryBean&quot;&gt;
+    &lt;property name=&quot;mapperLocations&quot; value=&quot;classpath:mappers/*.xml&quot;/&gt;
+    &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;/&gt;
+&lt;/bean&gt;</code></pre>
+<p>全部完成后,编写并执行单元测试</p>
+<pre><code class="java">@Test
+public void addnew(){
+    User user = new User();
+    user.setUsername(&quot;spring&quot;);
+    user.setPassword(&quot;123456&quot;);
+    user.setAge(19);
+    user.setPhone(&quot;12342131412&quot;)l
+    user.setEmail(&quot;Spring@163.com&quot;);
+    Integer rows = userMapper.addnew(user);
+    System.out.println(&quot;rows=&quot;+rows);
+}</code></pre>
+<h2 id="5-插入数据时获取自增的id"><a href="#5-插入数据时获取自增的id" class="headerlink" title="5. 插入数据时获取自增的id"></a>5. 插入数据时获取自增的id</h2><p>在配置<code>&lt;insert&gt;</code>时,添加配置<code>useGeneratedKeys=&quot;true&quot;</code>和<code>keyProperty=&quot;属性名&quot;</code>即可,例如:</p>
+<pre><code class="xml">&lt;insert id=&quot;addnew&quot; useGeneratedKeys=&quot;true&quot; keyProperty=&quot;id&quot;&gt;
+    INSERT INTO t_user(
+            username,password,
+            age,phone
+        )values(
+            #{username},#{password},
+            #{age},#{phone}
+        )
+&lt;/insert&gt;</code></pre>
+<p>注意:以上<code>keyProperty</code>属性的值表示”得到自增的id后封装到哪个属性中”,以上取值<code>id</code>表示<code>User</code>类中的<code>id</code>属性中.</p>
+<h2 id="6-关于-内的名称"><a href="#6-关于-内的名称" class="headerlink" title="6. 关于#{}内的名称"></a>6. 关于#{}内的名称</h2><p>当抽象方法的参数是一个对象,并且,在SQL语句需要使用对象中的属性时,<code>#{}</code>中写的是属性名,例如:</p>
+<pre><code class="xml">&lt;insert id=&quot;addnew&quot; useGeneratedKeys=&quot;true&quot; keyProperty=&quot;id&quot;&gt;
+    INSERT INTO t_user(
+            username,password,
+            age,phone
+        )values(
+            #{username},#{password},
+            #{age},#{phone}
+        )
+&lt;/insert&gt;</code></pre>
+<p>以上<code>#{username}</code>就是抽象方法的参数<code>User</code>类型的对象中的<code>username</code>属性的值!<br>如果抽象方法的参数只有1个,且这个参数直接作为SQL语句中的参数值,则<code>#{}</code>里可以随便写!</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -707,12 +762,12 @@ public String login(String username,String password){
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Java SpringMVC Day01</p>
+    <p><span class="copy-title">文章标题:</span>MyBatis</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="ZhYun1on9">ZhYun1on9</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-12-26, 10:22:29</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-26, 10:43:02</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/26/SpringMVCDay01/" title="Java SpringMVC Day01">http://yoursite.com/2019/12/26/SpringMVCDay01/</a>
+    <p><span class="copy-title">发布时间:</span>2020-01-20, 23:43:26</p>
+    <p><span class="copy-title">最后更新:</span>2020-01-20, 23:43:26</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/01/20/MyBatisDay01/" title="MyBatis">http://yoursite.com/2020/01/20/MyBatisDay01/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
