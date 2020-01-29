@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Java SpringDay01 | ZhYun1on9</title>
-  <meta name="keywords" content=" Java , 框架 , Spring ">
-  <meta name="description" content="Java SpringDay01 | ZhYun1on9">
+  <title>Linux高级操作 | ZhYun1on9</title>
+  <meta name="keywords" content=" Linux ">
+  <meta name="description" content="Linux高级操作 | ZhYun1on9">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Linux的目录结构Linux的文件系统是采用级层式的树状目录结构,在此结构中的最上层式根目录&quot;&#x2F;&quot;目录下再创建其他的目录.记住一句经典的话:在Linux世界里,一切皆文件. 目录结构的具体介绍&#x2F;bin    - 是Binary的缩写,这个目录存放着经常使用的命令 &#x2F;sbin    - s就是Super User的意思,这里存放的是系统管理员使用的系统管理程序 &#x2F;home">
 <meta property="og:type" content="article">
@@ -581,9 +581,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-SpringDay01" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Linux高级操作" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Java SpringDay01</h1>
+        <h1 class="article-title">Linux高级操作</h1>
     
     <div class="article-meta">
         
@@ -591,25 +591,21 @@
         
         <span class="book">
             
-                <a  data-rel="框架">框架</a>
+                <a  data-rel="Linux">Linux</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a class="color5">Java</a>
-            
-            <a class="color3">框架</a>
-            
-            <a class="color2">Spring</a>
+            <a class="color1">Linux</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-25 23:35:37'>2019-12-24 13:51</time>
+        创建时间:<time class="date" title='更新时间: 2020-01-29 14:54:23'>2020-01-29 10:18</time>
         
     </div>
     <div class="article-meta">
@@ -631,7 +627,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Spring"><span class="toc-text">Spring</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring框架"><span class="toc-text">Spring框架</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#IOC控制反转"><span class="toc-text">IOC控制反转</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-Hello-World"><span class="toc-text">Spring Hello World</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-Bean"><span class="toc-text">Java Bean</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#例子"><span class="toc-text">例子:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Spring-IOC容器提供了丰富的Bean管理功能"><span class="toc-text">Spring IOC容器提供了丰富的Bean管理功能</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#单例"><span class="toc-text">单例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#例子-1"><span class="toc-text">例子:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多个实例模式"><span class="toc-text">多个实例模式</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#权限的基本介绍"><span class="toc-text">权限的基本介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#rwx权限详情"><span class="toc-text">rwx权限详情</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#修改权限-chmod"><span class="toc-text">修改权限-chmod</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#修改文件所有者-chown"><span class="toc-text">修改文件所有者-chown</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#修改文件所在组-chgrp"><span class="toc-text">修改文件所在组-chgrp</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#crond任务调度器"><span class="toc-text">crond任务调度器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux磁盘分区-挂载"><span class="toc-text">Linux磁盘分区,挂载</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -647,134 +643,183 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h2 id="Spring框架"><a href="#Spring框架" class="headerlink" title="Spring框架"></a>Spring框架</h2><ol>
-<li>由一系列组件组成的框架,是软件的半成品,包含了软件常用的组件,可以作为软件的基石快速搭建开发软件</li>
-<li>其核心功能: IOC(控制反转) AOP(面向切面儿编程)</li>
-<li>使用Spring必须遵守Spring约定的规则</li>
-</ol>
-<h1 id="IOC控制反转"><a href="#IOC控制反转" class="headerlink" title="IOC控制反转"></a>IOC控制反转</h1><ol>
-<li><p>控制反转: 相对主动控制对象而言,将对象的控制交给容器管理的现象叫控制反转</p>
-</li>
-<li><p>Spring核心功能IOC: 可以帮助我们管理对象,使用者只需要从Spring得到对象,然后使用对象.</p>
-</li>
-<li><p>测试Spring IOC功能:</p>
-<pre><code> 1. 导入Spring
- 2. 创建一个类
- 3. 编写配置文件: 将类名告诉SPring
- 4. 启动Spring,Spring会自动创建管理对象
- 5. 通过Spring获得对象,测试对象</code></pre><h2 id="Spring-Hello-World"><a href="#Spring-Hello-World" class="headerlink" title="Spring Hello World"></a>Spring Hello World</h2></li>
-<li><p>创建Maven项目,导入Spring组件:</p>
-<pre><code> &lt;dependencies&gt;
-   &lt;dependency&gt;
-       &lt;groupId&gt;junit&lt;/groupId&gt;
-       &lt;artifactId&gt;junit&lt;/artifactId&gt;
-       &lt;version&gt;4.12&lt;/version&gt;
-   &lt;/dependency&gt;
-   &lt;dependency&gt;
-       &lt;groupId&gt;org.springframework&lt;/groupId&gt;
-       &lt;artifactId&gt;spring-context&lt;/artifactId&gt;
-       &lt;version&gt;4.3.25.RELEASE&lt;/version&gt;
-&lt;/dependency&gt;
-&lt;/dependencies&gt;</code></pre></li>
-<li><p>创建被管理的类</p>
-<pre><code> public class DemoBean{
-     return &quot;Hello World&quot;;
- }</code></pre></li>
-<li><p>编写配置文件</p>
-<pre><code> &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot; 
- xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
- xmlns:context=&quot;http://www.springframework.org/schema/context&quot; 
- xmlns:jdbc=&quot;http://www.springframework.org/schema/jdbc&quot;  
- xmlns:jee=&quot;http://www.springframework.org/schema/jee&quot; 
- xmlns:tx=&quot;http://www.springframework.org/schema/tx&quot;
- xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot; 
- xmlns:mvc=&quot;http://www.springframework.org/schema/mvc&quot;
- xmlns:util=&quot;http://www.springframework.org/schema/util&quot;
- xmlns:jpa=&quot;http://www.springframework.org/schema/data/jpa&quot;
- xsi:schemaLocation=&quot;
-     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
-     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
-     http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd
-     http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd
-     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
-     http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd
-     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
-     http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
-     http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd&quot;&gt;
-
- &lt;bean id=&quot;demo&quot; class=&quot;demo.DemoBean&quot;&gt;
- &lt;/beans&gt;</code></pre></li>
-<li><p>编写测试类:</p>
-<pre><code>public class Test{
- public static void main(String[] args){
-     // 创建Spring容器
-     ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);
-     // 从Spring容器中获取被管理的对象
-     DemoBean bean = (DemoBean)ctx.getBean(&quot;demo&quot;);
-     // 输出对象的时候,自动调用其toString()
-     System.out.println(bean);
- }
-}</code></pre></li>
-</ol>
-<h1 id="Java-Bean"><a href="#Java-Bean" class="headerlink" title="Java Bean"></a>Java Bean</h1><ul>
-<li><p>Spring建议被管理的对象时JavaBean对象,Spring可宽泛的支持任何Java对象</p>
-</li>
-<li><p>Java Bean: 符合一定规范的Java对象</p>
-<pre><code>  1. 有Package
-  2. 有无参数构造器
-  3. 实现序列化接口
-  4. 可以使用gatXxx/setXxx定义&quot;Bean&quot;属性
-
-      &gt; 可以利用开发工具自动生成</code></pre></li>
-<li><p>Bean属性: 是指getXxx和setXxx, bean属性名xxx</p>
-</li>
-<li><p>对象属性: 是指对象的实例变量</p>
-<h3 id="例子"><a href="#例子" class="headerlink" title="例子:"></a>例子:</h3><pre><code>class Person{
-  String name; //实例变量,对象属性
-  String getName(){ // Bean属性,属性名 name
-      return name;
-  }
-}</code></pre></li>
-</ul>
-<h1 id="Spring-IOC容器提供了丰富的Bean管理功能"><a href="#Spring-IOC容器提供了丰富的Bean管理功能" class="headerlink" title="Spring IOC容器提供了丰富的Bean管理功能"></a>Spring IOC容器提供了丰富的Bean管理功能</h1><ul>
-<li>Spring为了支持任何软件,提供丰富的Bean对象管理功能</li>
-<li><h2 id="单例"><a href="#单例" class="headerlink" title="单例"></a>单例</h2></li>
-<li>单例: 软件运行期间只有唯一不变的一个实例</li>
-<li>Spring默认情况下按照单例规则管理对象<h2 id="例子-1"><a href="#例子-1" class="headerlink" title="例子:"></a>例子:</h2><pre><code>public class TestCase{
-  ClassPathXmlApplicationContext ctx;
-  @Before //在...之前,在测试案例之前
-  public void init(){
-      System.out.println(&quot;init&quot;);
-      ctx = new ClassPathXmlApplication(&quot;applicationContext.xml&quot;);
-  }
-  @Test
-  public void testDemoBean(){
-      DemoBean bean = (DemoBean)ctx.getBean(&quot;demo&quot;);
-      System.out.println(bean);
-  }
-  @Test
-  public void testSingleton(){
-      DemoBean bean1 = (DemoBean)ctx.getBean(&quot;demo&quot;);
-      DemoBean bean2 = (DemoBean)ctx.getBean(&quot;demo&quot;);
-      System.out.println(bean1==bean2);
-  }
-  @After //在...之后,在测试案例之后
-  public void destroy(){
-      System.out.println(&quot;destroy&quot;);
-      ctx.close();
-  }
-}</code></pre><h2 id="多个实例模式"><a href="#多个实例模式" class="headerlink" title="多个实例模式"></a>多个实例模式</h2></li>
-</ul>
+        <h1 id="权限的基本介绍"><a href="#权限的基本介绍" class="headerlink" title="权限的基本介绍"></a>权限的基本介绍</h1><p>ls -l 中显示的内容如下<br><img src="%E6%9D%83%E9%99%90%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D.png" alt=""><br>0-9位说明</p>
 <ol>
-<li>编写配置文件:<pre><code> &lt;!-- 设置了属性 scope=&quot;prototype&quot; 以后就是多个实例,每次使用对象时候都会创建一个新的实例 --&gt;
- &lt;bean id=&quot;demo2&quot; scope=&quot;prototype&quot; class=&quot;demo.DemoBean&quot;&gt;&lt;/bean&gt;</code></pre>例子:<pre><code>@Test
-public void testPrototype(){
- //多例测试
- DemoBean bean1 = (DemoBean)ctx.getBean(&quot;demo2&quot;);
- DemoBean bean2 = (DemoBean)ctx.getBean(&quot;demo2&quot;);
- System.out.println(bean1==bean2);
-}</code></pre></li>
+<li>第<code>0</code>位确定文件类型(d,-,1,c,b)</li>
+<li>第<code>1</code>位确定所有者(该文件的所有者)拥有该文件的权限. —-User</li>
+<li>第<code>4-6</code>位确定所属组(同用户组的)拥有该文件的权限. —-Group</li>
+<li>第<code>7-9</code>位确定其他用户拥有该文件的权限. —-Other</li>
+</ol>
+<h1 id="rwx权限详情"><a href="#rwx权限详情" class="headerlink" title="rwx权限详情"></a>rwx权限详情</h1><ol>
+<li>rwx作用到文件<ol>
+<li><code>[r]</code>代表可读:可以读取,查看.</li>
+<li><code>[w]</code>代表可写:可以修改,但时不代表可以删除该文件,删除一个文件的前提条件是对该文件所在的目录有写权限,才能删除该文件</li>
+<li><code>[x]</code>代表可执行:可以被执行</li>
+</ol>
+</li>
+<li>rwx作用到目录<ol>
+<li><code>[r]</code>代表可读:可以读取,<code>ls</code>查看目录内容</li>
+<li><code>[w]</code>代表可写:可以修改,目录内创建+删除+重命名</li>
+<li><code>[x]</code>代表可执行:可以进入该目录</li>
+</ol>
+</li>
+</ol>
+<h1 id="修改权限-chmod"><a href="#修改权限-chmod" class="headerlink" title="修改权限-chmod"></a>修改权限-chmod</h1><ol>
+<li>基本说明:<br> 通过<code>chmod</code>指令,可以修改文件或者目录的权限.</li>
+<li>第一种方式: <code>+,-,= 变更权限</code><br><code>u:所有者 g:所有组 o:其他人 a:所有人(u,g,o的总和)</code><ol>
+<li>chmod u=rwx,g=rx,o=x 文件目录名</li>
+<li>chmod o+w 文件目录名</li>
+<li>chmod a-x 文件目录名</li>
+</ol>
+</li>
+<li>第二种方式:通过<code>数字变更权限</code></li>
+</ol>
+<p><strong>规则</strong>:<code>r=4 w=2 x=1</code></p>
+<h1 id="修改文件所有者-chown"><a href="#修改文件所有者-chown" class="headerlink" title="修改文件所有者-chown"></a>修改文件所有者-chown</h1><ol>
+<li>基本介绍<br><code>chown [选项] newowner file</code> 改变文件的所有者<br><code>chown newowner:newgroup file</code> 改变用户的所有者和所有组</li>
+<li>选项<br> <code>-R</code> : 如果是目录,则使其下所有子文件或目录递归生效</li>
+</ol>
+<h1 id="修改文件所在组-chgrp"><a href="#修改文件所在组-chgrp" class="headerlink" title="修改文件所在组-chgrp"></a>修改文件所在组-chgrp</h1><ol>
+<li>基本介绍<br><code>chgrp newgroup file</code> 改变文件的所有组</li>
+</ol>
+<h1 id="crond任务调度器"><a href="#crond任务调度器" class="headerlink" title="crond任务调度器"></a>crond任务调度器</h1><ol>
+<li>原理示意图<br><img src="crond%E5%91%A8%E6%9C%9F%E4%BB%BB%E5%8A%A1.png" alt=""><br>crontab 进行 定时任务的设置</li>
+<li>概述<br> 任务调度: 是指系统在某个时间执行的特定的命令或程序<br> 任务调度分类:<pre><code> 1. 系统工作:
+     有些重要的工作必须周而复始地执行.如病毒扫描等
+ 2. 个别用户工作:
+     个别用户可能希望执行某些程序,比如对mysql数据库的备份</code></pre></li>
+<li>基本语法:<br> crontab[选项]</li>
+<li>常用选项<table>
+<thead>
+<tr>
+<th align="center">功能</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-e</td>
+<td align="center">编辑crontab定时任务</td>
+</tr>
+<tr>
+<td align="center">-l</td>
+<td align="center">查询crontab任务</td>
+</tr>
+<tr>
+<td align="center">-r</td>
+<td align="center">删除当前用户所有的crontab任务</td>
+</tr>
+</tbody></table>
+</li>
+<li>步骤如下:<ol>
+<li>crontab -e</li>
+<li>*/1 * * * * ls -l /etc &gt;&gt; /tmp/to.txt</li>
+<li>当保存退出后就开始启动任务了</li>
+<li>在每一分钟就会自动的调用 ls -l /etc &gt;&gt; /tmp/to.txt</li>
+</ol>
+</li>
+<li>参数详细说明</li>
+</ol>
+<ul>
+<li><p>5个占位符说明:</p>
+<table>
+<thead>
+<tr>
+<th align="center">项目</th>
+<th align="center">含义</th>
+<th align="center">范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">第一个”*”</td>
+<td align="center">一个小时当中的第几分钟</td>
+<td align="center">0-59</td>
+</tr>
+<tr>
+<td align="center">第二个”*”</td>
+<td align="center">一天当中的第几个小时</td>
+<td align="center">0-23</td>
+</tr>
+<tr>
+<td align="center">第三个”*”</td>
+<td align="center">一个月当中的第几天</td>
+<td align="center">1-31</td>
+</tr>
+<tr>
+<td align="center">第四个”*”</td>
+<td align="center">一年当中的第几月</td>
+<td align="center">1-12</td>
+</tr>
+<tr>
+<td align="center">第五个”*”</td>
+<td align="center">一周当中的星期几</td>
+<td align="center">0-7</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>特殊符号的说明</p>
+<table>
+<thead>
+<tr>
+<th align="center">特殊符号</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">*</td>
+<td align="center">代表任何时间</td>
+</tr>
+<tr>
+<td align="center">,</td>
+<td align="center">代表不连续的时间</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">代表连续的时间范围</td>
+</tr>
+<tr>
+<td align="center">*/n</td>
+<td align="center">代表每隔多久执行一次</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h1 id="Linux磁盘分区-挂载"><a href="#Linux磁盘分区-挂载" class="headerlink" title="Linux磁盘分区,挂载"></a>Linux磁盘分区,挂载</h1><ol>
+<li><p>分区的方式:<br> mbr分区:</p>
+<pre><code> 1. 最多支持四个主分区
+ 2. 系统只能安装在主分区
+ 3. 扩展分区要占一个主分区
+ 4. MBR最大只支持2TB,但拥有最好的兼容性</code></pre><p> gtp分区:</p>
+<pre><code> 1. 支持无限多个主分区
+ 2. 最大支持18EB的大容量</code></pre></li>
+<li><p>原理介绍<br> Linux来说无论几个分区,分给哪一个目录使用,它归根结底就只有一个根目录,一个独立且唯一的文件结构,Linux中每个分区都是用来组成整个文件系统的一部分.<br> Linux采用了一种叫<code>mount&quot;载入&quot;</code>的处理方法,它的整个文件系统种包含了一整套的文件和目录,且将一个分区和一个目录联系起来.这时要载入的一个分区将使它的存储空间在一个目录下获取</p>
+</li>
+<li><p>磁盘说明</p>
+<ol>
+<li>Linux硬盘分<code>IDE硬盘</code>和<code>SCSI硬盘</code>,目前基本上使SCSI硬盘</li>
+<li>对于<code>IDE硬盘</code>,驱动器标识符位<code>hdx~</code>.其中<code>hd</code>表名分区所在设备的类型,这里是指<code>IDE硬盘</code>了,<code>x</code>为盘号<strong>(a为基本盘,b为基本从属盘,c为辅助主盘,d为辅助从属盘)</strong>,<code>~</code>代表分区,前四个分区用数字<code>1到4表示</code>,它们是主分区或扩展分区,从5开始就是逻辑分区.</li>
+<li>对于<code>SCSI硬盘</code>则标识为<code>sdx~</code>,<code>SCSI硬盘</code>是用<code>sd</code>来表示分区所在设备的类型的,其余则和<code>IDE硬盘</code>的表示一样</li>
+</ol>
+</li>
+<li><p>使用<code>lsblk</code>指令查看当前系统的分区情况<br><img src="lsblk%E7%A1%AC%E7%9B%98%E6%8C%87%E4%BB%A4.png" alt=""></p>
+</li>
+<li><p>增加一块硬盘</p>
+<ol>
+<li><p>虚拟机添加硬盘</p>
+<p><img src="%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%B7%BB%E5%8A%A0%E7%A1%AC%E7%9B%98.png" alt=""></p>
+</li>
+<li><p>分区 fdisk /dev/sdb<br><img src="%E5%A2%9E%E5%8A%A0%E7%A1%AC%E7%9B%982~1.png" alt=""><br><img src="%E5%A2%9E%E5%8A%A0%E7%A1%AC%E7%9B%982~2.png" alt=""></p>
+</li>
+<li><p>格式化 mkfs -t ext4 /dev/sdb1</p>
+<p><img src="%E5%A2%9E%E5%8A%A0%E7%A1%AC%E7%9B%983.png" alt=""></p>
+</li>
+<li><p>挂载 先创建一个 /home/newdisk,挂载mount /dev/sdb1 /home/newdisk</p>
+<p><img src="%E5%A2%9E%E5%8A%A0%E7%A1%AC%E7%9B%984.png" alt=""></p>
+</li>
+<li><p>设置可以自动挂载(永久挂载.当你重启系统.仍然可以挂载到 /home/newdisk)</p>
+<p><img src="%E5%A2%9E%E5%8A%A0%E7%A1%AC%E7%9B%985.png" alt=""></p>
+</li>
+</ol>
+</li>
 </ol>
 
       
@@ -789,12 +834,12 @@ public void testPrototype(){
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Java SpringDay01</p>
+    <p><span class="copy-title">文章标题:</span>Linux高级操作</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="ZhYun1on9">ZhYun1on9</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-12-24, 13:51:32</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-25, 23:35:37</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/24/SpringDay01/" title="Java SpringDay01">http://yoursite.com/2019/12/24/SpringDay01/</a>
+    <p><span class="copy-title">发布时间:</span>2020-01-29, 10:18:00</p>
+    <p><span class="copy-title">最后更新:</span>2020-01-29, 14:54:23</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/01/29/Linux%E9%AB%98%E7%BA%A7%E6%93%8D%E4%BD%9C/" title="Linux高级操作">http://yoursite.com/2020/01/29/Linux%E9%AB%98%E7%BA%A7%E6%93%8D%E4%BD%9C/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
